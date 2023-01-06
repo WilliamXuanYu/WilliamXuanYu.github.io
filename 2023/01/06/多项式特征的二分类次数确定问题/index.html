@@ -24,7 +24,7 @@
 <meta property="og:description" content="问题描述：已知六个特征（记作$X_1,X_2…X_6$），取值为（-2,2），均值接近0（约-0.01），方差接近1（约1.15），设有函数$Y&#x3D;a_0+a_1X^{b_1}_1+a_2X_2^{b_2}+…+a_6X_6^{b_6}$（假设最高项次数小于10），对Y做Sigmoid(Y)函数处理，输出为0&#x2F;1（二分类），现有1000个样本（Train.txt：900作为训练集，100作为测试集">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-01-06T15:52:40.000Z">
-<meta property="article:modified_time" content="2023-01-06T16:02:57.581Z">
+<meta property="article:modified_time" content="2023-01-06T16:27:29.708Z">
 <meta property="article:author" content="Xuan Yu">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="未解决">
@@ -279,7 +279,6 @@
 <p><strong>问题描述：</strong><br>已知六个特征（记作$X_1,X_2…X_6$），取值为（-2,2），均值接近0（约-0.01），方差接近1（约1.15），设有函数$Y=a_0+a_1X^{b_1}_1+a_2X_2^{b_2}+…+a_6X_6^{b_6}$（假设最高项次数小于10），对Y做Sigmoid(Y)函数处理，输出为0/1（二分类），现有1000个样本（Train.txt：900作为训练集，100作为测试集），求矩阵a和b<br>限制：不使用神经网络和深度学习，主要支撑库为numpy</p>
 </blockquote>
 <p>$Sigmoid(Z)=\frac{1}{1+e^{-Z}}$</p>
-<p><a href="多项式特征的二分类次数确定问题+93a03c71-56fc-4308-8c6c-60c53991be80/Train.txt">Train.txt</a></p>
 <blockquote>
 <p>实际结果：指数依次为0 4 2 3 1 5 6(第一个0为代表第一位为常量，用做偏移)<br>在已知次数的情况下，笔者梯度下降准确率为98.99%（全局），100%（测试集）<br>所用权重为：</p>
 </blockquote>
