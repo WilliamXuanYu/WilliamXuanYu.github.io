@@ -16,21 +16,23 @@
   <meta name="author" content="Xuan Yu">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="问题描述：已知六个特征（记作$X_1,X_2…X_6$），取值为（-2,2），均值接近0（约-0.01），方差接近1（约1.15），设有函数$Y&#x3D;a_0+a_1X^{b_1}_1+a_2X_2^{b_2}+…+a_6X_6^{b_6}$（假设最高项次数小于10），对Y做Sigmoid(Y)函数处理，输出为0&#x2F;1（二分类），现有1000个样本（Train.txt：900作为训练集，100作为测试集">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/01/05/hello-world/index.html">
+<meta property="og:title" content="多项式特征的二分类次数确定问题">
+<meta property="og:url" content="http://example.com/2023/01/06/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E7%89%B9%E5%BE%81%E7%9A%84%E4%BA%8C%E5%88%86%E7%B1%BB%E6%AC%A1%E6%95%B0%E7%A1%AE%E5%AE%9A%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="欢迎光临">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="问题描述：已知六个特征（记作$X_1,X_2…X_6$），取值为（-2,2），均值接近0（约-0.01），方差接近1（约1.15），设有函数$Y&#x3D;a_0+a_1X^{b_1}_1+a_2X_2^{b_2}+…+a_6X_6^{b_6}$（假设最高项次数小于10），对Y做Sigmoid(Y)函数处理，输出为0&#x2F;1（二分类），现有1000个样本（Train.txt：900作为训练集，100作为测试集">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-01-05T13:52:18.563Z">
-<meta property="article:modified_time" content="2023-01-05T13:49:16.331Z">
+<meta property="article:published_time" content="2023-01-06T15:52:40.000Z">
+<meta property="article:modified_time" content="2023-01-06T16:02:57.581Z">
 <meta property="article:author" content="Xuan Yu">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="未解决">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Hello World - 欢迎光临</title>
+  <title>多项式特征的二分类次数确定问题 - 欢迎光临</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="多项式特征的二分类次数确定问题"></span>
           
         </div>
 
@@ -207,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-01-05 21:52" pubdate>
-          2023年1月5日 晚上
+        <time datetime="2023-01-06 23:52" pubdate>
+          2023年1月6日 晚上
         </time>
       </span>
     
@@ -219,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          367 字
+          2.2k 字
         
       </span>
     
@@ -230,7 +232,7 @@
         
         
         
-          4 分钟
+          19 分钟
         
       </span>
     
@@ -268,24 +270,131 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none">多项式特征的二分类次数确定问题</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+                <blockquote>
+<p><strong>问题描述：</strong><br>已知六个特征（记作$X_1,X_2…X_6$），取值为（-2,2），均值接近0（约-0.01），方差接近1（约1.15），设有函数$Y=a_0+a_1X^{b_1}_1+a_2X_2^{b_2}+…+a_6X_6^{b_6}$（假设最高项次数小于10），对Y做Sigmoid(Y)函数处理，输出为0/1（二分类），现有1000个样本（Train.txt：900作为训练集，100作为测试集），求矩阵a和b<br>限制：不使用神经网络和深度学习，主要支撑库为numpy</p>
+</blockquote>
+<p>$Sigmoid(Z)=\frac{1}{1+e^{-Z}}$</p>
+<p><a href="%E5%A4%9A%E9%A1%B9%E5%BC%8F%E7%89%B9%E5%BE%81%E7%9A%84%E4%BA%8C%E5%88%86%E7%B1%BB%E6%AC%A1%E6%95%B0%E7%A1%AE%E5%AE%9A%E9%97%AE%E9%A2%98+93a03c71-56fc-4308-8c6c-60c53991be80/Train.txt">Train.txt</a></p>
+<blockquote>
+<p>实际结果：指数依次为0 4 2 3 1 5 6(第一个0为代表第一位为常量，用做偏移)<br>在已知次数的情况下，笔者梯度下降准确率为98.99%（全局），100%（测试集）<br>所用权重为：</p>
+</blockquote>
+<figure class="highlight plaintext"><figcaption><span>Text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs Plain">a0=-1.414120707795622245e+01,b0=0<br>a1=9.836514438332992771e-01,b1=4<br>a2=2.380517972559514028e+00,b2=2<br>a3=7.800843335621133745e-01,b3=3<br>a4=-7.085426102987223196e+00,b4=1<br>a5=-1.099617181010096756e+00,b5=5<br>a6=3.408382709960854906e-01,b6=6<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<hr>
+<hr>
+<blockquote>
+<p><strong>初步想法和思路：</strong></p>
+</blockquote>
+<ul>
+<li><p>思路一：暴力循环</p>
+<ul>
+<li><p>遍历次数所有可能，对每一可能下进行机器学习梯度下降确定系数</p>
+</li>
+<li><p>问题：</p>
+<ul>
+<li>复杂度过高：共计$10^6$种可能组合（可以做优化，但指数级别复杂度不变），对每一种可能做机器学习不现实（单次耗时约10s）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>思路二：最简单，也是暂时唯一验证的可行方式：试！</p>
+<ul>
+<li><p>每一项拆开，即设Ni为Xi的指数，从1~10进行遍历，保持其他项不变（形如：$Y=a_0+a_1X^{n}_1+1<em>X_2+…+1</em>X_6$，或将系数设置为0等）,理应在符合目标时拥有最高的准确率。重复六次，完成对指数的确定后，再进行梯度下降对系数进行学习。这种方式最多只需要60次确定指数。</p>
+</li>
+<li><p>问题</p>
+<ul>
+<li><p>一：如果不存在最高项次数小于10这一条件，我们无从谈起</p>
+</li>
+<li><p>二：实际上，对于形如这样的多项式Z = X+Y+T，排除Y和T，仅仅依靠离散点（如果连续或拥有无穷多样本点可行），我们无法证明Z和X之间满足什么关系（只看这两个变量很可能求出来没有相关性，如本题），即这种思路在数学逻辑上不完备，本题适用，可能在别的场景下不适用</p>
+</li>
+</ul>
+</li>
+<li><p>此外：</p>
+<ul>
+<li>此题适用，但必须说明，我们最终试验得到的最优取值，往往不止一个，我们会发现在某些特征的测试下，准确率非常接近，考虑到机器学习的误差，我们不能依靠细微的差距判断真正的次数，最终还需要再做判断</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>思路三：直接对全体进行梯度下降，学习a和b两个未知量</p>
+<ul>
+<li><p>问题：</p>
+<ul>
+<li><p>一：两者梯度交织，互相制约，互为约束条件</p>
+</li>
+<li><p>二：X取值含负数，这段无法求导，即没有梯度</p>
+<ul>
+<li>可以通过数据处理，全部映射为正数，但这会丢失一个重要数据：次数的奇偶性（Sigmoid函数看重正负而非绝对数值）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>思路四：指定系数，对指数梯度下降求解</p>
+<ul>
+<li><p>指定系数（如全为1），对$Y=a_0+X^{b_1}_1+X_2^{b_2}+…+X_6^{b_6}$这个函数进行梯度下降。大概率在指数与函数相同时准确率最高（我们认为指数比系数对结果影响更大）。</p>
+</li>
+<li><p>问题：</p>
+<ul>
+<li><p>一：X取值含负数，这段无法求导，更没有梯度一说</p>
+<ul>
+<li><p>可以通过数据处理，全部映射为正数，但这会丢失一个重要数据：次数的奇偶性（Sigmoid函数看重正负而非绝对数值）</p>
+</li>
+<li><p>实际测试结果结果相差过大，与实际几乎无关系</p>
+</li>
+</ul>
+</li>
+<li><p>二：系数怎么指定？</p>
+<ul>
+<li>全为1一定不会有好结果，如上所述，这会忽略特征的正负性，这对Sigmoid非常重要</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>分析：</p>
+<blockquote>
+<p>这种方法几乎一定有问题，不考虑学习率、次数为整数等细节，单从逻辑三段论上说，我们的假设“指数比系数对结果影响更大”这一条本身就有问题，我们的特征取值本身较小（-2,2），而实际上系数存在14以上的数值，在很多情况下“指数不比系数对结果影响大”</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>思路五：对三和四的结合优化</p>
+<ul>
+<li><p>先分析单一特征，得到正负相关性，在正负相关性的作用下进行如三的处理</p>
+</li>
+<li><p>问题：</p>
+<ul>
+<li>对于形如这样的多项式Z =X+Y+T，排除或固定Y和T，我们很可能发现证明Z和X之间满足什么关系，在Pearson相关性分析中，我们会发现他们不含有相关性（笔者认为主要原因是最终输出为0/1的离散点，对每一个特征每一个次方值测试全部“不相关”）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>分析：</strong></p>
+</blockquote>
+<ul>
+<li><p>笔者认为，在判断次数这一问题上，主要难点在于我们使用的不是原始数据，而是经过了Sigmoid函数处理后的参数，Sigmoid函数将连续数据变为离散，这一步损失太大，也就直接导致了函数空间过大，相关性分析表示无相关性，否则我们完全可以直接最小二乘法拟合曲线……</p>
+</li>
+<li><p>可以尝试的想法：</p>
+<ul>
+<li><p>使用元学习单独对指数部分进行处理，因为已知为多项式函数，完全可以仿照现有模型自行仿造相似模型对元学习进行训练（不过如果采用这种方式，不如直接神经网络或深度学习让他直接输出0/1的结果……）</p>
+</li>
+<li><p>补充上述想法：有意义，他使得模型具有可解释性</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<blockquote>
+<p>后记：<br>本来以为是一个很简单的问题，没想到这么棘手，这几天推了好几遍公式，也尝试不同的数据处理和激活函数，但都不能解决本质问题……甚至还想过能不能将0/1倒推回离散的值（反正是可行解之一），也查了很多资料和文献，都没有发现想要的……现在做基础研究的成果比大热方向少太多了……之后会多看看数学方向，是否有更好的处理方法，在此留作记录</p>
+</blockquote>
 
                 
               </div>
@@ -295,6 +404,15 @@
               <div class="post-metas my-3">
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%AD%A6%E4%B9%A0/">#学习</a>
+      
+        <a href="/tags/%E6%9C%AA%E8%A7%A3%E5%86%B3/">#未解决</a>
+      
+    </div>
+  
 </div>
 
 
@@ -303,8 +421,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>http://example.com/2023/01/05/hello-world/</div>
+      <div>多项式特征的二分类次数确定问题</div>
+      <div>http://example.com/2023/01/06/多项式特征的二分类次数确定问题/</div>
     </div>
     <div class="license-meta">
       
@@ -316,7 +434,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年1月5日</div>
+          <div>2023年1月6日</div>
         </div>
       
       
@@ -348,15 +466,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/01/05/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/" title="测试文章">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">测试文章</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2023/01/06/SVM%E4%B8%8B%E6%9D%A1%E4%BB%B6%E6%9E%81%E5%80%BC%E8%AE%A1%E7%AE%97%E6%97%A0%E8%A7%A3%E6%83%85%E5%86%B5%E6%8E%A2%E7%A9%B6/" title="SVM下条件极值计算无解情况探究">
+                        <span class="hidden-mobile">SVM下条件极值计算无解情况探究</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
