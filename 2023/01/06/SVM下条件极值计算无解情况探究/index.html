@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://picture-for-mark.oss-cn-hangzhou.aliyuncs.com/img/IMG_20221102_220253.jpg">
 <meta property="og:image" content="https://picture-for-mark.oss-cn-hangzhou.aliyuncs.com/img/IMG_20221102_220348.jpg">
 <meta property="article:published_time" content="2023-01-06T15:52:20.000Z">
-<meta property="article:modified_time" content="2023-01-06T16:39:42.177Z">
+<meta property="article:modified_time" content="2023-01-06T16:43:38.979Z">
 <meta property="article:author" content="Xuan Yu">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary_large_image">
@@ -234,7 +234,7 @@
         
         
         
-          36 分钟
+          35 分钟
         
       </span>
     
@@ -303,8 +303,18 @@
 &\ \ -\lambda_1-\lambda_2-\lambda_3\\
 \end{split}
 \end{equation}</script><p>由 $y_1+y_2=y_3$，将$y_3$带入消去：</p>
-<p>$\begin{equation}<br>\begin{split}<br>\mathcal{J}(\boldsymbol{\lambda})=&amp;1/2[(x_1^2+y_1^2+x_3^2+y_3^2-2x_1x_3-2y_1y_3)\lambda_1^2\<br>&amp;+(x_2^2+y_2^2+x_3^2+y_3^2-2x_2x_3-2y_2y_3)\lambda_2^2\<br>&amp;+2(x_3^2+y_3^2+x_1x_2+y_1y_2-x_1x_3-y_1y_3-x_2x_3-y_2y_3)\lambda_1\lambda_2]\<br>&amp; -2\lambda_1-2\lambda_2\<br>=&amp;1/2[((x_1-x_3)^2+(y_1-y_3)^2)\lambda_1^2\<br>&amp;+((x_2-x_3)^2+(y_2-y_3)^2))\lambda_2^2\<br>&amp;+2((x_3-x1)(x_3-x_2)+(y_3-y_1)(y_3-y_2))\lambda_1\lambda_2]\<br>&amp; -2\lambda_1-2\lambda_2\<br>\end{split}<br>\end{equation}$</p>
-<p>对此分别对$\lambda_1，\lambda_2$求偏导</p>
+<script type="math/tex; mode=display">\begin{equation}
+\begin{split}
+\mathcal{J}(\boldsymbol{\lambda})=&1/2[(x_1^2+y_1^2+x_3^2+y_3^2-2x_1x_3-2y_1y_3)\lambda_1^2\\
+&+(x_2^2+y_2^2+x_3^2+y_3^2-2x_2x_3-2y_2y_3)\lambda_2^2\\
+&+2(x_3^2+y_3^2+x_1x_2+y_1y_2-x_1x_3-y_1y_3-x_2x_3-y_2y_3)\lambda_1\lambda_2]\\
+& -2\lambda_1-2\lambda_2\\
+=&1/2[((x_1-x_3)^2+(y_1-y_3)^2)\lambda_1^2\\
+&+((x_2-x_3)^2+(y_2-y_3)^2))\lambda_2^2\\
+&+2((x_3-x1)(x_3-x_2)+(y_3-y_1)(y_3-y_2))\lambda_1\lambda_2]\\
+& -2\lambda_1-2\lambda_2\\
+\end{split}
+\end{equation}</script><p>对此分别对$\lambda_1，\lambda_2$求偏导</p>
 <script type="math/tex; mode=display">\begin{equation}
 \begin{split}
 \frac{\partial \mathcal{J}(\lambda) }{ \partial \lambda_1} =& ((x_1-x_3)^2+(y_1-y_3)^2)\lambda_1\\+&[(x_3-x_1)(x_3-x_2)+(y_3-y_1)(y_3-y_2)]\lambda_2 -2
@@ -314,8 +324,11 @@
 \frac{\partial \mathcal{J}(\lambda) }{ \partial \lambda_2} =& ((x_2-x_3)^2+(y_2-y_3)^2)\lambda_1\\+&[(x_3-x_1)(x_3-x_2)+(y_3-y_1)(y_3-y_2)]\lambda_1 -2
 \end{split}
 \end{equation}</script><p>令式(3)(4)为0，可求出其条件极值，显然，当两式平行时无解。故令式(3)(4)为0，且斜率相等，联立求解可得：</p>
-<p>$\begin{equation}<br>\begin{split}<br>\frac{y_3-y_1}{x_3-x_1}=\frac{y_3-y_2}{x_3-x_2}<br>\end{split}<br>\end{equation}$</p>
-<p>上式表示过点1,3直线的斜率与过点2,3的直线的斜率相等，<strong>显然其三点共线</strong></p>
+<script type="math/tex; mode=display">\begin{equation}
+\begin{split}
+\frac{y_3-y_1}{x_3-x_1}=\frac{y_3-y_2}{x_3-x_2}
+\end{split}
+\end{equation}</script><p>上式表示过点1,3直线的斜率与过点2,3的直线的斜率相等，<strong>显然其三点共线</strong></p>
 </li>
 </ul>
 </li>
@@ -324,9 +337,15 @@
 <li>以点(1,1)(2,2)(3,3)为例（三点共线），分别为positive，positive，negative</li>
 </ul>
 <p>$\begin{equation}<br>\begin{split}<br>\mathcal{J}(\boldsymbol{\lambda})=4\lambda_1^2+\lambda_2^2+4\lambda_1\lambda_2-2\lambda_1-2\lambda_2<br>\end{split}<br>\end{equation}$</p>
-<p>$\begin{equation}<br>\begin{split}<br>\frac{\partial \mathcal{J}(\lambda) }{ \partial \lambda_1} =8\lambda_1+4\lambda_2-2<br>\end{split}<br>\end{equation}$</p>
-<p>$\begin{equation}<br>\begin{split}<br>\frac{\partial \mathcal{J}(\lambda) }{ \partial \lambda_2} =4\lambda_1+2\lambda_2-2<br>\end{split}<br>\end{equation}$</p>
-<p>两式平行，无解</p>
+<script type="math/tex; mode=display">\begin{equation}
+\begin{split}
+\frac{\partial \mathcal{J}(\lambda) }{ \partial \lambda_1} =8\lambda_1+4\lambda_2-2
+\end{split}
+\end{equation}</script><script type="math/tex; mode=display">\begin{equation}
+\begin{split}
+\frac{\partial \mathcal{J}(\lambda) }{ \partial \lambda_2} =4\lambda_1+2\lambda_2-2
+\end{split}
+\end{equation}</script><p>两式平行，无解</p>
 </li>
 </ul>
 <h1 id="四点情况"><a href="#四点情况" class="headerlink" title="四点情况"></a>四点情况</h1><ul>
