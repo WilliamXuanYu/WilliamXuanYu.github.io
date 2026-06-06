@@ -96,9 +96,11 @@ const content = {
         role: "First author",
         venue: "arXiv, 2026",
         summary:
-          "Closed-loop value estimation and ranking for end-to-end planning; improves PDMS/EPDMS and candidate diversity, surpassing or matching previous best methods including the NAVSIM leaderboard best scheme at 94.5 PDMS as recorded on May 21, 2026.",
+          "Closed-loop value estimation and ranking for end-to-end planning; NAVSIM leaderboard best solution (94.5 PDMS), surpassing or matching previous SOTA methods on NAVSIM v1/v2, NavHard, and nuScenes.",
+        summaryHtml:
+          "Closed-loop value estimation and ranking for end-to-end planning; <strong>NAVSIM leaderboard best solution (94.5 PDMS)</strong>, surpassing or matching previous SOTA methods on NAVSIM v1/v2, NavHard, and nuScenes.",
         desc:
-          "CLOVER addresses the mismatch between single-trajectory imitation learning and rule-based multi-metric evaluation in end-to-end autonomous driving planning. It first expands proposal coverage with evaluator-filtered pseudo-expert trajectories, then applies conservative closed-loop self-distillation with teacher-guided top-k and vector-Pareto objectives to optimize both the scoring network and proposal generator. Experiments on NAVSIM v1, NAVSIM v2, NavHard, and open-loop nuScenes show improved planning quality metrics (PDMS/EPDMS) and candidate diversity, surpassing or matching previous best methods including the NAVSIM leaderboard best scheme at 94.5 PDMS as recorded on May 21, 2026.",
+          "CLOVER addresses the mismatch between single-trajectory imitation learning and rule-based multi-metric evaluation in end-to-end autonomous driving planning. It first expands proposal coverage with evaluator-filtered pseudo-expert trajectories, then applies conservative closed-loop self-distillation with teacher-guided top-k and vector-Pareto objectives to optimize both the scoring network and proposal generator. Experiments on NAVSIM v1, NAVSIM v2, NavHard, and open-loop nuScenes show improved planning quality metrics (PDMS/EPDMS) and candidate diversity, surpassing or matching previous SOTA methods. CLOVER achieves 94.5 PDMS and becomes the NAVSIM leaderboard best solution (as of May 21, 2026).",
         tags: ["Closed-loop planning", "NAVSIM", "94.5 PDMS reference", "Trajectory ranking"],
         links: [
           { label: "Paper", url: "https://arxiv.org/abs/2605.15120", icon: "file-text" },
@@ -327,9 +329,11 @@ const content = {
         role: "第一作者",
         venue: "arXiv, 2026",
         summary:
-          "面向端到端自动驾驶规划的闭环价值估计与排序框架；提升 PDMS/EPDMS 和候选多样性，超过或匹配此前最优方法，包括 2026 年 5 月 21 日记录的 NAVSIM leaderboard best 方案 94.5 PDMS。",
+          "面向端到端自动驾驶规划的闭环价值估计与排序框架；NAVSIM leaderboard best 方案（94.5 PDMS），在 NAVSIM v1/v2、NavHard、nuScenes 基准上超过或匹配此前 SOTA 方案。",
+        summaryHtml:
+          "面向端到端自动驾驶规划的闭环价值估计与排序框架；<strong>NAVSIM leaderboard best 方案（94.5 PDMS）</strong>，在 NAVSIM v1/v2、NavHard、nuScenes 基准上超过或匹配此前 SOTA 方案。",
         desc:
-          "CLOVER 面向端到端自动驾驶规划提出闭环价值估计与排序框架，解决单轨迹模仿训练与基于规则的多指标评估之间的错配问题。方法首先通过经评估器筛选的伪专家轨迹扩展提案覆盖范围，然后应用保守闭环自蒸馏，利用教师指导的 top-k 和向量帕累托目标优化评分网络和提案生成器。此外，我们对评分器中介的生成器精化何时可靠进行了理论和实证研究。在 NAVSIM v1、NAVSIM v2、NavHard 和开环 nuScenes 上，CLOVER 提升了规划质量指标（PDMS/EPDMS）和候选多样性，超过或匹配此前最优方法，包括 2026 年 5 月 21 日记录的 NAVSIM leaderboard best 方案 94.5 PDMS。",
+          "CLOVER 面向端到端自动驾驶规划提出闭环价值估计与排序框架，解决单轨迹模仿训练与基于规则的多指标评估之间的错配问题。方法首先通过经评估器筛选的伪专家轨迹扩展提案覆盖范围，然后应用保守闭环自蒸馏，利用教师指导的 top-k 和向量帕累托目标优化评分网络和提案生成器。此外，我们对评分器中介的生成器精化何时可靠进行了理论和实证研究。在 NAVSIM v1、NAVSIM v2、NavHard 和开环 nuScenes 上，CLOVER 提升了规划质量指标（PDMS/EPDMS）和候选多样性，超过或匹配此前 SOTA 方案。CLOVER 达到 94.5 PDMS，成为 NAVSIM leaderboard best 方案（截至 2026 年 5 月 21 日）。",
         tags: ["闭环规划", "NAVSIM", "94.5 PDMS", "轨迹排序"],
         links: [
           { label: "Paper", url: "https://arxiv.org/abs/2605.15120", icon: "file-text" },
@@ -515,7 +519,7 @@ function compactCard(item, options = {}) {
         <h3>${item.title}</h3>
         ${options.badge ? `<span class="badge ${options.badgeClass || ""}">${options.badge}</span>` : ""}
       </div>
-      <p>${item.summary || item.desc}</p>
+      <p>${item.summaryHtml || item.summary || item.desc}</p>
       ${
         meta.length
           ? `<ul class="meta">${meta.map((entry) => `<li>${entry}</li>`).join("")}</ul>`
