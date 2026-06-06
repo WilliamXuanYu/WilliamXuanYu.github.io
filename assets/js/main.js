@@ -146,7 +146,7 @@ const content = {
       {
         title: "SAMoE-VLA: A Scene Adaptive Mixture-of-Experts Vision-Language-Action Model for Autonomous Driving",
         type: "collab",
-        role: "Collaborator",
+        role: "Core author",
         venue: "arXiv, 2026",
         summary:
           "Scene-adaptive MoE routing from BEV features plus cross-modal causal attention; achieves state-of-the-art results on nuScenes open-loop planning and LangAuto closed-loop benchmarks with fewer resources.",
@@ -157,8 +157,8 @@ const content = {
       },
       {
         title: "Deployment and Optimization of MapTR-based Lane Detection on Huawei MDC610",
-        type: "collab",
-        role: "Oral presentation",
+        type: "first",
+        role: "First author / Oral presentation",
         venue: "IEEE CCDC",
         summary:
           "Deployment and optimization of MapTR-based lane detection on Huawei MDC610; MapTR inference reduced from 958ms to 220ms and the work was selected as an IEEE CCDC oral presentation.",
@@ -399,7 +399,7 @@ const content = {
       {
         title: "SAMoE-VLA: A Scene Adaptive Mixture-of-Experts Vision-Language-Action Model for Autonomous Driving",
         type: "collab",
-        role: "合作作者",
+        role: "核心作者",
         venue: "arXiv, 2026",
         summary:
           "从 BEV 场景特征推导 MoE 路由并结合跨模态因果注意力，在 nuScenes 开环规划和 LangAuto 闭环基准上以更少资源达到先进性能。",
@@ -410,8 +410,8 @@ const content = {
       },
       {
         title: "Deployment and Optimization of MapTR-based Lane Detection on Huawei MDC610",
-        type: "collab",
-        role: "Oral 汇报",
+        type: "first",
+        role: "第一作者 / Oral 汇报",
         venue: "IEEE CCDC",
         summary:
           "MapTR-based 车道检测在华为 MDC610 平台上的部署与优化；MapTR 推理时间从 958ms 优化至 220ms，相关工作入选 IEEE CCDC oral 汇报。",
