@@ -25,7 +25,7 @@ const content = {
       focusLabel: "Focus",
       focus: "Autonomous Driving Planning and VLA",
       highlightsLabel: "Highlights",
-      highlights: "5 papers, 3 patents, 2x National Scholarship",
+      highlights: "6 papers, 3 patents, 2x National Scholarship",
       emailLabel: "Email"
     },
     stats: {
@@ -154,6 +154,22 @@ const content = {
           "SAMoE-VLA addresses the instability of directly applying token-level MoE mechanisms from LLM architectures to VLA driving models. It conditions expert selection on structured scene representations instead of token embeddings, deriving MoE routing signals from BEV features that encode traffic-scene context. It also introduces conditional cross-modal causal attention to integrate world state, language intent, and action history into a unified temporal reasoning process. Experiments on nuScenes open-loop planning and LangAuto closed-loop benchmarks show state-of-the-art performance with fewer resources than previous VLA- and world-model-based methods.",
         tags: ["Scene-adaptive MoE", "BEV routing", "VLA", "LangAuto"],
         links: [{ label: "Paper", url: "https://arxiv.org/abs/2603.08113", icon: "file-text" }]
+      },
+      {
+        title: "Deployment and Optimization of MapTR-based Lane Detection on Huawei MDC610",
+        type: "collab",
+        role: "Oral presentation",
+        venue: "IEEE CCDC",
+        summary:
+          "Deployment and optimization of MapTR-based lane detection on Huawei MDC610; MapTR inference reduced from 958ms to 220ms and the work was selected as an IEEE CCDC oral presentation.",
+        summaryHtml:
+          "Deployment and optimization of MapTR-based lane detection on Huawei MDC610; MapTR inference reduced from 958ms to 220ms and the work was selected as an <strong>IEEE CCDC oral presentation</strong>.",
+        desc:
+          "This work reports the deployment and optimization of MapTR-based lane detection on Huawei MDC610, covering model adaptation, graph optimization, quantization, and platform-specific operator support for edge deployment. Through deep adaptation and optimization, MapTR inference time was reduced from 958ms to 220ms. The work was selected as an IEEE CCDC oral presentation.",
+        descHtml:
+          "This work reports the deployment and optimization of MapTR-based lane detection on Huawei MDC610, covering model adaptation, graph optimization, quantization, and platform-specific operator support for edge deployment. Through deep adaptation and optimization, MapTR inference time was reduced from 958ms to 220ms. The work was selected as an <strong>IEEE CCDC oral presentation</strong>.",
+        tags: ["Huawei MDC610", "MapTR 958ms to 220ms", "Edge deployment", "IEEE CCDC Oral"],
+        links: []
       }
     ],
     patentsItems: [
@@ -188,8 +204,12 @@ const content = {
         meta: "JAC / Huawei collaborative project",
         summary:
           "Edge deployment and optimization of BEVFormer, MapTR v1/v2, FastBEV, FlashOCC, Sparse4D and related algorithms on Huawei MDC610 / MDC610 Pro; MapTR inference reduced from 958ms to 220ms, with an IEEE CCDC oral presentation.",
+        summaryHtml:
+          "Edge deployment and optimization of BEVFormer, MapTR v1/v2, FastBEV, FlashOCC, Sparse4D and related algorithms on Huawei MDC610 / MDC610 Pro; MapTR inference reduced from 958ms to 220ms, with an <strong>IEEE CCDC oral presentation</strong>.",
         desc:
           "Worked on edge deployment of autonomous-driving algorithms on Huawei Ascend MDC610 / MDC610 Pro platforms, including graph optimization, quantization, and custom operator adaptation. Completed adaptation and deployment for BEVFormer, MapTR v1/v2, FastBEV, FlashOCC, Sparse4D, and related models. Performed deep adaptation and optimization for MapTR, reducing inference time from 958ms to 220ms. This work was presented at IEEE CCDC as “Deployment and Optimization of MapTR-based Lane Detection on Huawei MDC610” and selected as an oral presentation.",
+        descHtml:
+          "Worked on edge deployment of autonomous-driving algorithms on Huawei Ascend MDC610 / MDC610 Pro platforms, including graph optimization, quantization, and custom operator adaptation. Completed adaptation and deployment for BEVFormer, MapTR v1/v2, FastBEV, FlashOCC, Sparse4D, and related models. Performed deep adaptation and optimization for MapTR, reducing inference time from 958ms to 220ms. This work was presented at IEEE CCDC as “Deployment and Optimization of MapTR-based Lane Detection on Huawei MDC610” and selected as an <strong>oral presentation</strong>.",
         tags: ["Huawei MDC610", "Model deployment", "MapTR 958ms to 220ms", "IEEE CCDC Oral"]
       },
       {
@@ -258,7 +278,7 @@ const content = {
       focusLabel: "方向",
       focus: "自动驾驶规划与 VLA",
       highlightsLabel: "亮点",
-      highlights: "5 篇论文，3 项相关专利，2 次国家奖学金",
+      highlights: "6 篇论文，3 项相关专利，2 次国家奖学金",
       emailLabel: "邮箱"
     },
     stats: {
@@ -387,6 +407,22 @@ const content = {
           "SAMoE-VLA 针对将继承自 LLM 架构的 token 级 MoE 机制直接应用于 VLA 模型时带来的性能不稳定和安全性能下降问题，提出场景自适应的视觉-语言-动作框架。方法基于结构化场景表示而非 token 嵌入来条件化专家选择，从 BEV 特征中推导 MoE 路由信号，使系统能根据不同驾驶条件进行场景相关的专家权重分配与合并。为了支持跨世界知识、感知、语言和动作的时间一致性推理，方法还引入条件跨模态因果注意力机制，将世界状态、语言意图和动作历史整合到统一因果推理过程中。在 nuScenes 开放环路规划数据集和 LangAuto 闭环基准测试上，SAMoE-VLA 达到先进性能，并以更少资源超过此前 VLA 和世界模型方法。",
         tags: ["场景自适应 MoE", "BEV 路由", "VLA", "LangAuto"],
         links: [{ label: "Paper", url: "https://arxiv.org/abs/2603.08113", icon: "file-text" }]
+      },
+      {
+        title: "Deployment and Optimization of MapTR-based Lane Detection on Huawei MDC610",
+        type: "collab",
+        role: "Oral 汇报",
+        venue: "IEEE CCDC",
+        summary:
+          "MapTR-based 车道检测在华为 MDC610 平台上的部署与优化；MapTR 推理时间从 958ms 优化至 220ms，相关工作入选 IEEE CCDC oral 汇报。",
+        summaryHtml:
+          "MapTR-based 车道检测在华为 MDC610 平台上的部署与优化；MapTR 推理时间从 958ms 优化至 220ms，相关工作入选 <strong>IEEE CCDC oral 汇报</strong>。",
+        desc:
+          "该工作汇报了 MapTR-based 车道检测在华为 MDC610 平台上的部署与优化，覆盖模型适配、图优化、量化和面向边缘部署的平台算子支持等内容。通过深度适配与优化，MapTR 推理时间从 958ms 优化至 220ms。相关工作入选 IEEE CCDC oral 汇报。",
+        descHtml:
+          "该工作汇报了 MapTR-based 车道检测在华为 MDC610 平台上的部署与优化，覆盖模型适配、图优化、量化和面向边缘部署的平台算子支持等内容。通过深度适配与优化，MapTR 推理时间从 958ms 优化至 220ms。相关工作入选 <strong>IEEE CCDC oral 汇报</strong>。",
+        tags: ["Huawei MDC610", "MapTR 958ms 到 220ms", "边缘部署", "IEEE CCDC Oral"],
+        links: []
       }
     ],
     patentsItems: [
@@ -421,8 +457,12 @@ const content = {
         meta: "江淮 / 华为合作项目",
         summary:
           "在华为 MDC610 / MDC610 Pro 平台部署并优化 BEVFormer、MapTR v1/v2、FastBEV、FlashOCC、Sparse4D 等算法；MapTR 推理时间从 958ms 优化至 220ms，相关工作入选 IEEE CCDC oral 汇报。",
+        summaryHtml:
+          "在华为 MDC610 / MDC610 Pro 平台部署并优化 BEVFormer、MapTR v1/v2、FastBEV、FlashOCC、Sparse4D 等算法；MapTR 推理时间从 958ms 优化至 220ms，相关工作入选 <strong>IEEE CCDC oral 汇报</strong>。",
         desc:
           "参与自动驾驶算法在华为昇腾 MDC610 / MDC610 Pro 平台上的边缘部署，涉及图优化、量化和自定义算子适配。已完成 BEVFormer、MapTR v1/v2、FastBEV、FlashOCC、Sparse4D 等算法适配和部署，并对 MapTR 模型做了深度适配优化，将推理时间从 958ms 优化至 220ms。此部分内容以 “Deployment and Optimization of MapTR-based Lane Detection on Huawei MDC610” 为题在 IEEE CCDC（The 38th Chinese Control and Decision Conference）会议汇报，并获得 oral。",
+        descHtml:
+          "参与自动驾驶算法在华为昇腾 MDC610 / MDC610 Pro 平台上的边缘部署，涉及图优化、量化和自定义算子适配。已完成 BEVFormer、MapTR v1/v2、FastBEV、FlashOCC、Sparse4D 等算法适配和部署，并对 MapTR 模型做了深度适配优化，将推理时间从 958ms 优化至 220ms。此部分内容以 “Deployment and Optimization of MapTR-based Lane Detection on Huawei MDC610” 为题在 IEEE CCDC（The 38th Chinese Control and Decision Conference）会议汇报，并获得 <strong>oral</strong>。",
         tags: ["Huawei MDC610", "模型部署", "MapTR 958ms 到 220ms", "IEEE CCDC Oral"]
       },
       {
@@ -470,6 +510,7 @@ const views = ["overview", "research", "publications", "patents", "projects", "e
 let currentLanguage = localStorage.getItem("language") || "en";
 let currentView = views.includes(location.hash.slice(1)) ? location.hash.slice(1) : "overview";
 let photoIndex = Number(localStorage.getItem("photoIndex") || 0);
+let photoTimer = null;
 
 const $ = (selector) => document.querySelector(selector);
 
@@ -618,7 +659,7 @@ function publicationCard(item) {
         <h3>${item.title}</h3>
         <span class="badge">${item.role}</span>
       </div>
-      <p>${item.desc}</p>
+      <p>${item.descHtml || item.desc}</p>
       <ul class="meta">
         <li>${item.venue}</li>
         ${item.tags.map((tag) => `<li>${tag}</li>`).join("")}
@@ -697,7 +738,7 @@ function renderProjects() {
                 <h3>${item.title}</h3>
                 <span class="badge">${item.meta}</span>
               </div>
-              <p>${item.desc}</p>
+              <p>${item.descHtml || item.desc}</p>
               <ul class="meta">
                 ${(item.tags || []).map((tag) => `<li>${tag}</li>`).join("")}
               </ul>
@@ -774,8 +815,29 @@ function renderView() {
 }
 
 function updatePhoto() {
-  $("#profilePhoto").src = photos[photoIndex % photos.length];
-  localStorage.setItem("photoIndex", String(photoIndex % photos.length));
+  const index = photoIndex % photos.length;
+  document.querySelectorAll(".profile-photo").forEach((photo, photoNodeIndex) => {
+    photo.classList.toggle("is-active", photoNodeIndex === index);
+  });
+  $("#avatarToggle").classList.toggle("showing-formal", index === 0);
+  $("#avatarToggle").classList.toggle("showing-casual", index === 1);
+  localStorage.setItem("photoIndex", String(index));
+}
+
+function nextPhoto() {
+  photoIndex = (photoIndex + 1) % photos.length;
+  updatePhoto();
+}
+
+function startPhotoRotation() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  window.clearInterval(photoTimer);
+  photoTimer = window.setInterval(nextPhoto, 6000);
+}
+
+function stopPhotoRotation() {
+  window.clearInterval(photoTimer);
+  photoTimer = null;
 }
 
 function render(lang) {
@@ -805,9 +867,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   $("#avatarToggle").addEventListener("click", () => {
-    photoIndex = (photoIndex + 1) % photos.length;
-    updatePhoto();
+    nextPhoto();
+    startPhotoRotation();
   });
+
+  $("#avatarToggle").addEventListener("mouseenter", stopPhotoRotation);
+  $("#avatarToggle").addEventListener("mouseleave", startPhotoRotation);
+  $("#avatarToggle").addEventListener("focusin", stopPhotoRotation);
+  $("#avatarToggle").addEventListener("focusout", startPhotoRotation);
+  startPhotoRotation();
 
   $("#collapseButton").addEventListener("click", () => {
     $(".view-card").classList.toggle("collapsed");
