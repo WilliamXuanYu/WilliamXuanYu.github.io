@@ -5,27 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="William Xuan Yu is a graduate student working on end-to-end autonomous driving, VLA models, planning, evaluation, and efficient deployment."
+      content="Sining Ang is a graduate student working on end-to-end autonomous driving, VLA systems, planning, evaluation, and efficient deployment."
     />
-    <meta name="theme-color" content="#f7f8fb" />
-    <title>William Xuan Yu</title>
+    <meta name="theme-color" content="#f5f7f9" />
+    <title>Sining Ang</title>
     <link rel="preload" href="assets/img/profile.jpg" as="image" />
+    <link rel="preload" href="assets/img/casual.jpg" as="image" />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
     <script src="assets/js/main.js" defer></script>
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="William Xuan Yu">
-        <span class="brand-mark">W</span>
-        <span>William Xuan Yu</span>
+      <a class="brand" href="#overview" data-view-link="overview" aria-label="Sining Ang">
+        <span class="brand-mark">A</span>
+        <span>Sining Ang</span>
       </a>
 
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#research" data-i18n="nav.research">Research</a>
-        <a href="#publications" data-i18n="nav.publications">Publications</a>
-        <a href="#projects" data-i18n="nav.projects">Projects</a>
-        <a href="#education" data-i18n="nav.education">Education</a>
+        <a href="#overview" data-view-link="overview" data-i18n="nav.overview">Overview</a>
+        <a href="#research" data-view-link="research" data-i18n="nav.research">Research</a>
+        <a href="#publications" data-view-link="publications" data-i18n="nav.publications">Publications</a>
+        <a href="#patents" data-view-link="patents" data-i18n="nav.patents">Patents</a>
+        <a href="#projects" data-view-link="projects" data-i18n="nav.projects">Projects</a>
+        <a href="#education" data-view-link="education" data-i18n="nav.education">Education</a>
       </nav>
 
       <button class="language-toggle" id="languageToggle" type="button" aria-label="Switch language">
@@ -34,47 +37,68 @@
       </button>
     </header>
 
-    <main id="top">
-      <section class="hero section-band">
-        <div class="hero-copy">
-          <p class="eyebrow" data-i18n="hero.eyebrow">Academic Homepage</p>
-          <h1>William Xuan Yu</h1>
-          <p class="subtitle" data-i18n="hero.subtitle">
-            M.S. student in Automation at the University of Science and Technology of China, working on autonomous driving planning and VLA systems.
-          </p>
-          <p class="intro" data-i18n="hero.intro">
-            My research focuses on reliable end-to-end driving planners, closed-loop evaluation, vision-language-action models, and efficient deployment for real-world autonomous driving systems.
-          </p>
-
-          <div class="hero-actions" aria-label="Profile links">
-            <a class="button primary" href="https://github.com/WilliamXuanYu" target="_blank" rel="noreferrer">
-              <i data-lucide="github" aria-hidden="true"></i>
-              <span>GitHub</span>
-            </a>
-            <a class="button" href="https://arxiv.org/abs/2605.15120" target="_blank" rel="noreferrer">
-              <i data-lucide="file-text" aria-hidden="true"></i>
-              <span data-i18n="hero.featuredPaper">Featured Paper</span>
-            </a>
-            <a class="button" href="#publications">
-              <i data-lucide="book-open" aria-hidden="true"></i>
-              <span data-i18n="hero.publications">Publications</span>
-            </a>
+    <main class="page-shell">
+      <section class="profile-card" aria-label="Profile summary">
+        <div class="profile-cover">
+          <div class="cover-text">
+            <span data-i18n="profile.badge">Academic Homepage</span>
+            <strong data-i18n="profile.status">Open to PhD and research opportunities</strong>
           </div>
         </div>
 
-        <aside class="profile-panel" aria-label="Profile summary">
-          <img src="assets/img/profile.jpg" alt="Portrait of William Xuan Yu" />
-          <div class="profile-meta">
-            <p data-i18n="profile.role">Graduate Student, USTC</p>
-            <p data-i18n="profile.focus">End-to-End Autonomous Driving</p>
+        <div class="profile-body">
+          <button class="avatar-button" id="avatarToggle" type="button" title="Click to view more">
+            <img id="profilePhoto" src="assets/img/profile.jpg" alt="Portrait of Sining Ang" />
+            <span class="avatar-hint" data-i18n="profile.photoHint">Click to view more</span>
+          </button>
+
+          <div class="profile-main">
+            <p class="eyebrow" data-i18n="profile.eyebrow">End-to-End Autonomous Driving</p>
+            <h1>Sining Ang <span data-i18n="profile.cnName">昂思宁</span></h1>
+            <p class="subtitle" data-i18n="profile.subtitle">
+              M.S. student in Automation at the University of Science and Technology of China.
+            </p>
+            <p class="intro" data-i18n="profile.intro">
+              I work on reliable autonomous driving planners, closed-loop evaluation, vision-language-action systems, and efficient deployment for real-world driving stacks.
+            </p>
+
+            <div class="quick-links" aria-label="External links">
+              <a class="button primary" href="https://github.com/WilliamXuanYu" target="_blank" rel="noreferrer">
+                <i data-lucide="github" aria-hidden="true"></i>
+                <span>GitHub</span>
+              </a>
+              <a class="button" href="https://arxiv.org/abs/2605.15120" target="_blank" rel="noreferrer">
+                <i data-lucide="file-text" aria-hidden="true"></i>
+                <span data-i18n="profile.featuredPaper">Featured Paper</span>
+              </a>
+            </div>
           </div>
-        </aside>
+
+          <aside class="profile-facts">
+            <div>
+              <span data-i18n="facts.affiliationLabel">Affiliation</span>
+              <strong data-i18n="facts.affiliation">USTC, Department of Automation</strong>
+            </div>
+            <div>
+              <span data-i18n="facts.focusLabel">Focus</span>
+              <strong data-i18n="facts.focus">Autonomous Driving Planning and VLA</strong>
+            </div>
+            <div>
+              <span data-i18n="facts.highlightsLabel">Highlights</span>
+              <strong data-i18n="facts.highlights">5 papers, 3 patents, 2x National Scholarship</strong>
+            </div>
+          </aside>
+        </div>
       </section>
 
-      <section class="quick-stats" aria-label="Highlights">
+      <section class="metrics" aria-label="Highlights">
         <div>
           <strong>5</strong>
           <span data-i18n="stats.papers">selected papers</span>
+        </div>
+        <div>
+          <strong>3</strong>
+          <span data-i18n="stats.patents">related patents</span>
         </div>
         <div>
           <strong>3</strong>
@@ -84,60 +108,25 @@
           <strong>#1/128</strong>
           <span data-i18n="stats.rank">undergraduate major ranking</span>
         </div>
-        <div>
-          <strong>2x</strong>
-          <span data-i18n="stats.nationalScholarship">National Scholarship</span>
-        </div>
       </section>
 
-      <section id="research" class="content-section">
-        <div class="section-heading">
-          <p class="eyebrow" data-i18n="research.eyebrow">Research</p>
-          <h2 data-i18n="research.title">Research Interests</h2>
-        </div>
-        <div class="research-grid" id="researchGrid"></div>
-      </section>
-
-      <section id="publications" class="content-section">
-        <div class="section-heading">
-          <p class="eyebrow" data-i18n="publications.eyebrow">Publications</p>
-          <h2 data-i18n="publications.title">Selected Publications</h2>
-        </div>
-        <div class="publication-list" id="publicationList"></div>
-      </section>
-
-      <section id="projects" class="content-section">
-        <div class="section-heading">
-          <p class="eyebrow" data-i18n="projects.eyebrow">Projects</p>
-          <h2 data-i18n="projects.title">Research and Engineering Experience</h2>
-        </div>
-        <div class="project-list" id="projectList"></div>
-      </section>
-
-      <section id="education" class="content-section split-section">
-        <div>
-          <div class="section-heading">
-            <p class="eyebrow" data-i18n="education.eyebrow">Education</p>
-            <h2 data-i18n="education.title">Education</h2>
+      <section class="view-card" aria-live="polite">
+        <div class="view-heading">
+          <div>
+            <p class="eyebrow" id="viewEyebrow">Overview</p>
+            <h2 id="viewTitle">Profile Snapshot</h2>
           </div>
-          <div class="timeline" id="educationList"></div>
+          <button class="collapse-button" id="collapseButton" type="button" aria-label="Collapse current section">
+            <i data-lucide="chevron-up" aria-hidden="true"></i>
+          </button>
         </div>
-
-        <div>
-          <div class="section-heading">
-            <p class="eyebrow" data-i18n="honors.eyebrow">Honors</p>
-            <h2 data-i18n="honors.title">Selected Honors</h2>
-          </div>
-          <div class="honor-list" id="honorList"></div>
-        </div>
+        <div class="view-content" id="viewContent"></div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p data-i18n="footer.note">
-        Built as a clean static academic homepage for GitHub Pages.
-      </p>
-      <a href="#top" aria-label="Back to top">
+      <p data-i18n="footer.note">Built as a clean static academic homepage for GitHub Pages.</p>
+      <a href="#overview" data-view-link="overview" aria-label="Back to overview">
         <i data-lucide="arrow-up" aria-hidden="true"></i>
       </a>
     </footer>

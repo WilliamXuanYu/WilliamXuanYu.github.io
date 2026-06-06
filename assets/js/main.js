@@ -1,53 +1,83 @@
+const photos = ["assets/img/profile.jpg", "assets/img/casual.jpg"];
+
 const content = {
   en: {
     nav: {
+      overview: "Overview",
       research: "Research",
       publications: "Publications",
+      patents: "Patents",
       projects: "Projects",
       education: "Education"
     },
-    hero: {
-      eyebrow: "Academic Homepage",
-      subtitle:
-        "M.S. student in Automation at the University of Science and Technology of China, working on autonomous driving planning and VLA systems.",
-      intro:
-        "My research focuses on reliable end-to-end driving planners, closed-loop evaluation, vision-language-action models, and efficient deployment for real-world autonomous driving systems.",
-      featuredPaper: "Featured Paper",
-      publications: "Publications"
-    },
     profile: {
-      role: "Graduate Student, USTC",
-      focus: "End-to-End Autonomous Driving"
+      badge: "Academic Homepage",
+      status: "Open to PhD and research opportunities",
+      photoHint: "Click to view more",
+      eyebrow: "End-to-End Autonomous Driving",
+      cnName: "昂思宁",
+      subtitle: "M.S. student in Automation at the University of Science and Technology of China.",
+      intro:
+        "I work on reliable autonomous driving planners, closed-loop evaluation, vision-language-action systems, and efficient deployment for real-world driving stacks.",
+      featuredPaper: "Featured Paper"
+    },
+    facts: {
+      affiliationLabel: "Affiliation",
+      affiliation: "USTC, Department of Automation",
+      focusLabel: "Focus",
+      focus: "Autonomous Driving Planning and VLA",
+      highlightsLabel: "Highlights",
+      highlights: "5 papers, 3 patents, 2x National Scholarship"
     },
     stats: {
       papers: "selected papers",
+      patents: "related patents",
       firstAuthor: "first-author works",
-      rank: "undergraduate major ranking",
-      nationalScholarship: "National Scholarship"
-    },
-    research: {
-      eyebrow: "Research",
-      title: "Research Interests"
-    },
-    publications: {
-      eyebrow: "Publications",
-      title: "Selected Publications"
-    },
-    projects: {
-      eyebrow: "Projects",
-      title: "Research and Engineering Experience"
-    },
-    education: {
-      eyebrow: "Education",
-      title: "Education"
-    },
-    honors: {
-      eyebrow: "Honors",
-      title: "Selected Honors"
+      rank: "undergraduate major ranking"
     },
     footer: {
       note: "Built as a clean static academic homepage for GitHub Pages."
     },
+    views: {
+      overview: { eyebrow: "Overview", title: "Profile Snapshot" },
+      research: { eyebrow: "Research", title: "Research Interests" },
+      publications: { eyebrow: "Publications", title: "Selected Publications" },
+      patents: { eyebrow: "Patents", title: "Related Patents" },
+      projects: { eyebrow: "Projects", title: "Research and Engineering Experience" },
+      education: { eyebrow: "Education", title: "Education and Honors" }
+    },
+    ui: {
+      searchPublications: "Search publications",
+      filterType: "Filter by type",
+      allTypes: "All types",
+      firstAuthor: "First author",
+      collaborator: "Collaborator",
+      noResults: "No matching publications.",
+      paper: "Paper",
+      code: "Code"
+    },
+    overviewItems: [
+      {
+        title: "Bio",
+        desc:
+          "Sining Ang is a graduate student in the Department of Automation at the University of Science and Technology of China. His current research centers on end-to-end autonomous driving, especially planning, evaluation, VLA systems, and latency-aware decision making."
+      },
+      {
+        title: "Current Direction",
+        desc:
+          "He is especially interested in building driving systems that can reason over scenes, generate diverse trajectory candidates, score them reliably under closed-loop evaluation, and deploy efficiently on practical platforms."
+      },
+      {
+        title: "Application Profile",
+        desc:
+          "This homepage is organized for academic self-introduction, PhD applications, and research project applications, with concise navigation across research, publications, patents, projects, and education."
+      },
+      {
+        title: "Research Keywords",
+        desc:
+          "Autonomous driving planning, vision-language-action models, closed-loop evaluation, fast-slow systems, trajectory ranking, model deployment, edge optimization."
+      }
+    ],
     researchItems: [
       {
         icon: "route",
@@ -73,6 +103,7 @@ const content = {
     publicationsItems: [
       {
         title: "CLOVER: Closed-Loop Value Estimation and Ranking for End-to-End Autonomous Driving Planning",
+        type: "first",
         role: "First author",
         venue: "arXiv, 2026",
         desc:
@@ -85,6 +116,7 @@ const content = {
       },
       {
         title: "ASSCG: Just-Right Gating over Chattering for Fast-Slow LLM Planning in Autonomous Driving",
+        type: "first",
         role: "First author",
         venue: "Preprint in preparation",
         desc:
@@ -94,6 +126,7 @@ const content = {
       },
       {
         title: "From Representational Complementarity to Dual Systems: Synergizing VLM and Vision-Only Backbones for End-to-End Driving",
+        type: "first",
         role: "First author",
         venue: "arXiv, 2026",
         desc:
@@ -103,6 +136,7 @@ const content = {
       },
       {
         title: "DriveFine: Refining-Augmented Masked Diffusion VLA for Precise and Robust Driving",
+        type: "collab",
         role: "Second author",
         venue: "arXiv, 2026",
         desc:
@@ -112,12 +146,39 @@ const content = {
       },
       {
         title: "SAMoE-VLA: A Scene Adaptive Mixture-of-Experts Vision-Language-Action Model for Autonomous Driving",
+        type: "collab",
         role: "Collaborator",
         venue: "arXiv, 2026",
         desc:
           "SAMoE-VLA conditions expert selection on structured scene representations instead of token-level routing. It derives MoE routing signals from BEV features and introduces conditional cross-modal causal attention for temporally consistent reasoning across world state, language intent, and action history.",
         tags: ["Scene-adaptive MoE", "BEV routing", "VLA"],
         links: [{ label: "Paper", url: "https://arxiv.org/abs/2603.08113", icon: "file-text" }]
+      }
+    ],
+    patentsItems: [
+      {
+        title: "Method and System for Sewage Suspended-Solid Recognition Based on IA-YOLOv7",
+        id: "CN116665092B",
+        status: "Granted",
+        role: "Lead student inventor; advisor listed as first inventor",
+        desc:
+          "An IA-YOLOv7-based recognition method and system for identifying suspended solids in sewage scenarios."
+      },
+      {
+        title: "Driving Decision Control Method and Electronic Device",
+        id: "CN121734456A",
+        status: "Published",
+        role: "First inventor; derived from ASSCG-related work",
+        desc:
+          "A driving decision-control method and electronic device related to fast-slow decision making for autonomous driving."
+      },
+      {
+        title: "Image Object Detection Method, System, and Device under Adverse Weather",
+        id: "CN116311254B",
+        status: "Granted",
+        role: "Core contributor",
+        desc:
+          "A method, system, and device for improving image object detection under adverse weather conditions."
       }
     ],
     projectItems: [
@@ -170,52 +231,81 @@ const content = {
   },
   zh: {
     nav: {
+      overview: "概览",
       research: "研究方向",
       publications: "论文",
+      patents: "专利",
       projects: "项目",
       education: "教育"
     },
-    hero: {
-      eyebrow: "个人学术主页",
-      subtitle: "中国科学技术大学自动化系硕士研究生，研究方向为自动驾驶规划与 VLA 系统。",
-      intro:
-        "我关注可靠的端到端自动驾驶规划、闭环评估、视觉-语言-动作模型，以及面向真实自动驾驶系统的高效部署与优化。",
-      featuredPaper: "代表论文",
-      publications: "论文列表"
-    },
     profile: {
-      role: "中国科学技术大学硕士研究生",
-      focus: "端到端自动驾驶"
+      badge: "个人学术主页",
+      status: "欢迎 PhD 与科研项目交流",
+      photoHint: "点击查看更多",
+      eyebrow: "端到端自动驾驶",
+      cnName: "昂思宁",
+      subtitle: "中国科学技术大学自动化系硕士研究生。",
+      intro:
+        "我关注可靠的自动驾驶规划、闭环评估、视觉-语言-动作系统，以及面向真实自动驾驶技术栈的高效部署。",
+      featuredPaper: "代表论文"
+    },
+    facts: {
+      affiliationLabel: "单位",
+      affiliation: "中国科学技术大学自动化系",
+      focusLabel: "方向",
+      focus: "自动驾驶规划与 VLA",
+      highlightsLabel: "亮点",
+      highlights: "5 篇论文，3 项相关专利，2 次国家奖学金"
     },
     stats: {
       papers: "代表论文",
+      patents: "相关专利",
       firstAuthor: "第一作者工作",
-      rank: "本科专业排名",
-      nationalScholarship: "国家奖学金"
-    },
-    research: {
-      eyebrow: "研究方向",
-      title: "Research Interests"
-    },
-    publications: {
-      eyebrow: "论文",
-      title: "Selected Publications"
-    },
-    projects: {
-      eyebrow: "项目",
-      title: "Research and Engineering Experience"
-    },
-    education: {
-      eyebrow: "教育",
-      title: "Education"
-    },
-    honors: {
-      eyebrow: "荣誉",
-      title: "Selected Honors"
+      rank: "本科专业排名"
     },
     footer: {
       note: "基于 GitHub Pages 构建的轻量静态学术主页。"
     },
+    views: {
+      overview: { eyebrow: "概览", title: "个人简况" },
+      research: { eyebrow: "研究方向", title: "研究兴趣" },
+      publications: { eyebrow: "论文", title: "代表论文" },
+      patents: { eyebrow: "专利", title: "相关专利" },
+      projects: { eyebrow: "项目", title: "科研与工程经历" },
+      education: { eyebrow: "教育", title: "教育经历与荣誉" }
+    },
+    ui: {
+      searchPublications: "搜索论文",
+      filterType: "按类型筛选",
+      allTypes: "全部类型",
+      firstAuthor: "第一作者",
+      collaborator: "合作作者",
+      noResults: "没有匹配的论文。",
+      paper: "论文",
+      code: "代码"
+    },
+    overviewItems: [
+      {
+        title: "个人简介",
+        desc:
+          "昂思宁是中国科学技术大学自动化系硕士研究生，目前研究集中在端到端自动驾驶，尤其是规划、评估、VLA 系统和延迟感知决策。"
+      },
+      {
+        title: "当前方向",
+        desc:
+          "我希望构建能够理解场景、生成多样候选轨迹、在闭环评估下可靠打分，并能高效部署到实际平台的自动驾驶系统。"
+      },
+      {
+        title: "用途定位",
+        desc:
+          "该主页面向学术自我介绍、PhD 申请和相关项目申请，按研究、论文、专利、项目和教育经历组织信息。"
+      },
+      {
+        title: "研究关键词",
+        desc:
+          "自动驾驶规划、视觉-语言-动作模型、闭环评估、快慢系统、轨迹排序、模型部署、边缘优化。"
+      }
+    ],
     researchItems: [
       {
         icon: "route",
@@ -241,6 +331,7 @@ const content = {
     publicationsItems: [
       {
         title: "CLOVER: Closed-Loop Value Estimation and Ranking for End-to-End Autonomous Driving Planning",
+        type: "first",
         role: "第一作者",
         venue: "arXiv, 2026",
         desc:
@@ -253,6 +344,7 @@ const content = {
       },
       {
         title: "ASSCG: Just-Right Gating over Chattering for Fast-Slow LLM Planning in Autonomous Driving",
+        type: "first",
         role: "第一作者",
         venue: "预印本准备中",
         desc:
@@ -262,6 +354,7 @@ const content = {
       },
       {
         title: "From Representational Complementarity to Dual Systems: Synergizing VLM and Vision-Only Backbones for End-to-End Driving",
+        type: "first",
         role: "第一作者",
         venue: "arXiv, 2026",
         desc:
@@ -271,6 +364,7 @@ const content = {
       },
       {
         title: "DriveFine: Refining-Augmented Masked Diffusion VLA for Precise and Robust Driving",
+        type: "collab",
         role: "第二作者",
         venue: "arXiv, 2026",
         desc:
@@ -280,12 +374,36 @@ const content = {
       },
       {
         title: "SAMoE-VLA: A Scene Adaptive Mixture-of-Experts Vision-Language-Action Model for Autonomous Driving",
+        type: "collab",
         role: "合作作者",
         venue: "arXiv, 2026",
         desc:
           "SAMoE-VLA 基于结构化场景表示而非 token 级路由来条件化专家选择，从 BEV 特征中推导 MoE 路由信号，并引入条件跨模态因果注意力，用于跨世界状态、语言意图和动作历史的时间一致推理。",
         tags: ["场景自适应 MoE", "BEV 路由", "VLA"],
         links: [{ label: "Paper", url: "https://arxiv.org/abs/2603.08113", icon: "file-text" }]
+      }
+    ],
+    patentsItems: [
+      {
+        title: "基于 IA-YOLOV7 的污水悬浮物识别方法及系统",
+        id: "CN116665092B",
+        status: "已授权",
+        role: "除导师第一发明人",
+        desc: "面向污水场景中悬浮物识别的 IA-YOLOV7 方法与系统。"
+      },
+      {
+        title: "一种驾驶决策控制方法和电子设备",
+        id: "CN121734456A",
+        status: "已公开",
+        role: "第一发明人；ASSCG 延伸工作",
+        desc: "与自动驾驶快慢系统决策控制相关的方法和电子设备。"
+      },
+      {
+        title: "一种恶劣天气情况下的图像目标检测方法、系统及设备",
+        id: "CN116311254B",
+        status: "已授权",
+        role: "核心参与者",
+        desc: "面向恶劣天气情况下图像目标检测的增强方法、系统及设备。"
       }
     ],
     projectItems: [
@@ -336,7 +454,10 @@ const content = {
   }
 };
 
+const views = ["overview", "research", "publications", "patents", "projects", "education"];
 let currentLanguage = localStorage.getItem("language") || "en";
+let currentView = views.includes(location.hash.slice(1)) ? location.hash.slice(1) : "overview";
+let photoIndex = Number(localStorage.getItem("photoIndex") || 0);
 
 const $ = (selector) => document.querySelector(selector);
 
@@ -344,125 +465,269 @@ function getPath(obj, path) {
   return path.split(".").reduce((acc, key) => (acc ? acc[key] : undefined), obj);
 }
 
+function icon(name) {
+  return `<i data-lucide="${name}" aria-hidden="true"></i>`;
+}
+
 function setStaticText(lang) {
   document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
-  document.title = lang === "zh" ? "William Xuan Yu | 个人学术主页" : "William Xuan Yu";
+  document.title = lang === "zh" ? "Sining Ang | 昂思宁" : "Sining Ang";
+  document.querySelector('meta[name="description"]').setAttribute(
+    "content",
+    lang === "zh"
+      ? "昂思宁的个人学术主页，研究方向为端到端自动驾驶、VLA 系统、规划评估与高效部署。"
+      : "Sining Ang is a graduate student working on end-to-end autonomous driving, VLA systems, planning, evaluation, and efficient deployment."
+  );
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     const value = getPath(content[lang], node.dataset.i18n);
     if (value) node.textContent = value;
   });
   $("#languageLabel").textContent = lang === "en" ? "中文" : "EN";
+  $("#avatarToggle").title = content[lang].profile.photoHint;
 }
 
-function icon(name) {
-  return `<i data-lucide="${name}" aria-hidden="true"></i>`;
+function setActiveView(view) {
+  currentView = views.includes(view) ? view : "overview";
+  document.querySelectorAll("[data-view-link]").forEach((link) => {
+    link.classList.toggle("active", link.dataset.viewLink === currentView);
+  });
+  const viewText = content[currentLanguage].views[currentView];
+  $("#viewEyebrow").textContent = viewText.eyebrow;
+  $("#viewTitle").textContent = viewText.title;
+  $(".view-card").classList.remove("collapsed");
+  renderView();
+  if (window.lucide) window.lucide.createIcons();
 }
 
-function renderResearch(lang) {
-  $("#researchGrid").innerHTML = content[lang].researchItems
-    .map(
-      (item) => `
-        <article class="research-card">
-          <div class="icon-box">${icon(item.icon)}</div>
-          <h3>${item.title}</h3>
-          <p>${item.desc}</p>
-        </article>
-      `
-    )
-    .join("");
+function renderOverview() {
+  return `
+    <div class="overview-grid">
+      ${content[currentLanguage].overviewItems
+        .map(
+          (item) => `
+            <article class="info-card">
+              <h3>${item.title}</h3>
+              <p>${item.desc}</p>
+            </article>
+          `
+        )
+        .join("")}
+    </div>
+  `;
 }
 
-function renderPublications(lang) {
-  $("#publicationList").innerHTML = content[lang].publicationsItems
-    .map(
-      (item) => `
-        <article class="publication-card">
-          <div class="pub-topline">
-            <h3>${item.title}</h3>
-            <span class="badge">${item.role}</span>
-          </div>
-          <p>${item.desc}</p>
-          <ul class="meta">
-            <li>${item.venue}</li>
-            ${item.tags.map((tag) => `<li>${tag}</li>`).join("")}
-          </ul>
-          ${
-            item.links.length
-              ? `<div class="card-links">${item.links
-                  .map(
-                    (link) =>
-                      `<a href="${link.url}" target="_blank" rel="noreferrer">${icon(link.icon)}<span>${link.label}</span></a>`
-                  )
-                  .join("")}</div>`
-              : ""
-          }
-        </article>
-      `
-    )
-    .join("");
+function renderResearch() {
+  return `
+    <div class="research-grid">
+      ${content[currentLanguage].researchItems
+        .map(
+          (item) => `
+            <article class="research-card">
+              <div class="icon-box">${icon(item.icon)}</div>
+              <h3>${item.title}</h3>
+              <p>${item.desc}</p>
+            </article>
+          `
+        )
+        .join("")}
+    </div>
+  `;
 }
 
-function renderProjects(lang) {
-  $("#projectList").innerHTML = content[lang].projectItems
-    .map(
-      (item) => `
-        <article class="project-card">
-          <div class="project-topline">
-            <h3>${item.title}</h3>
-            <span class="badge">${item.meta}</span>
-          </div>
-          <p>${item.desc}</p>
-          <ul class="meta">
-            ${item.tags.map((tag) => `<li>${tag}</li>`).join("")}
-          </ul>
-        </article>
-      `
-    )
-    .join("");
+function publicationCard(item) {
+  const linkHtml = item.links.length
+    ? `<div class="card-links">${item.links
+        .map((link) => `<a href="${link.url}" target="_blank" rel="noreferrer">${icon(link.icon)}<span>${link.label}</span></a>`)
+        .join("")}</div>`
+    : "";
+
+  return `
+    <article class="publication-card">
+      <div class="card-topline">
+        <h3>${item.title}</h3>
+        <span class="badge">${item.role}</span>
+      </div>
+      <p>${item.desc}</p>
+      <ul class="meta">
+        <li>${item.venue}</li>
+        ${item.tags.map((tag) => `<li>${tag}</li>`).join("")}
+      </ul>
+      ${linkHtml}
+    </article>
+  `;
 }
 
-function renderEducation(lang) {
-  $("#educationList").innerHTML = content[lang].educationItems
-    .map(
-      (item) => `
-        <article class="timeline-item">
-          <time>${item.date}</time>
-          <h3>${item.title}</h3>
-          <p>${item.desc}</p>
-        </article>
-      `
-    )
-    .join("");
+function renderPublications() {
+  const t = content[currentLanguage].ui;
+  return `
+    <div class="toolbar">
+      <label class="search-box">
+        ${icon("search")}
+        <input id="publicationSearch" type="search" placeholder="${t.searchPublications}" />
+      </label>
+      <label class="select-box">
+        ${icon("list-filter")}
+        <select id="publicationType" aria-label="${t.filterType}">
+          <option value="all">${t.allTypes}</option>
+          <option value="first">${t.firstAuthor}</option>
+          <option value="collab">${t.collaborator}</option>
+        </select>
+      </label>
+    </div>
+    <div class="publication-list" id="publicationList"></div>
+  `;
 }
 
-function renderHonors(lang) {
-  $("#honorList").innerHTML = content[lang].honorItems
-    .map(
-      (item) => `
-        <article class="honor-item">
-          <strong>${item.title}</strong>
-          <p>${item.desc}</p>
-        </article>
-      `
-    )
-    .join("");
+function updatePublicationList() {
+  const search = ($("#publicationSearch")?.value || "").trim().toLowerCase();
+  const type = $("#publicationType")?.value || "all";
+  const items = content[currentLanguage].publicationsItems.filter((item) => {
+    const haystack = [item.title, item.role, item.venue, item.desc, ...item.tags].join(" ").toLowerCase();
+    return (type === "all" || item.type === type) && (!search || haystack.includes(search));
+  });
+  $("#publicationList").innerHTML = items.length
+    ? items.map(publicationCard).join("")
+    : `<article class="info-card"><p>${content[currentLanguage].ui.noResults}</p></article>`;
+  if (window.lucide) window.lucide.createIcons();
+}
+
+function renderPatents() {
+  return `
+    <div class="patent-list">
+      ${content[currentLanguage].patentsItems
+        .map(
+          (item) => `
+            <article class="patent-card">
+              <div class="card-topline">
+                <h3>${item.title}</h3>
+                <span class="badge green">${item.status}</span>
+              </div>
+              <p>${item.desc}</p>
+              <ul class="meta">
+                <li>${item.id}</li>
+                <li>${item.role}</li>
+              </ul>
+            </article>
+          `
+        )
+        .join("")}
+    </div>
+  `;
+}
+
+function renderProjects() {
+  return `
+    <div class="project-list">
+      ${content[currentLanguage].projectItems
+        .map(
+          (item) => `
+            <article class="project-card">
+              <div class="card-topline">
+                <h3>${item.title}</h3>
+                <span class="badge">${item.meta}</span>
+              </div>
+              <p>${item.desc}</p>
+              <ul class="meta">
+                ${item.tags.map((tag) => `<li>${tag}</li>`).join("")}
+              </ul>
+            </article>
+          `
+        )
+        .join("")}
+    </div>
+  `;
+}
+
+function renderEducation() {
+  return `
+    <div class="split-grid">
+      <div class="timeline">
+        ${content[currentLanguage].educationItems
+          .map(
+            (item) => `
+              <article class="timeline-item">
+                <time>${item.date}</time>
+                <h3>${item.title}</h3>
+                <p>${item.desc}</p>
+              </article>
+            `
+          )
+          .join("")}
+      </div>
+      <div class="honor-list">
+        ${content[currentLanguage].honorItems
+          .map(
+            (item) => `
+              <article class="honor-item">
+                <strong>${item.title}</strong>
+                <p>${item.desc}</p>
+              </article>
+            `
+          )
+          .join("")}
+      </div>
+    </div>
+  `;
+}
+
+function renderView() {
+  const renderers = {
+    overview: renderOverview,
+    research: renderResearch,
+    publications: renderPublications,
+    patents: renderPatents,
+    projects: renderProjects,
+    education: renderEducation
+  };
+  $("#viewContent").innerHTML = renderers[currentView]();
+  if (currentView === "publications") {
+    updatePublicationList();
+    $("#publicationSearch").addEventListener("input", updatePublicationList);
+    $("#publicationType").addEventListener("change", updatePublicationList);
+  }
+}
+
+function updatePhoto() {
+  $("#profilePhoto").src = photos[photoIndex % photos.length];
+  localStorage.setItem("photoIndex", String(photoIndex % photos.length));
 }
 
 function render(lang) {
-  setStaticText(lang);
-  renderResearch(lang);
-  renderPublications(lang);
-  renderProjects(lang);
-  renderEducation(lang);
-  renderHonors(lang);
+  currentLanguage = lang;
   localStorage.setItem("language", lang);
+  setStaticText(lang);
+  setActiveView(currentView);
+  updatePhoto();
   if (window.lucide) window.lucide.createIcons();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   render(currentLanguage);
+
+  document.querySelectorAll("[data-view-link]").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const view = link.dataset.viewLink;
+      history.pushState(null, "", `#${view}`);
+      setActiveView(view);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
+
   $("#languageToggle").addEventListener("click", () => {
-    currentLanguage = currentLanguage === "en" ? "zh" : "en";
-    render(currentLanguage);
+    render(currentLanguage === "en" ? "zh" : "en");
+  });
+
+  $("#avatarToggle").addEventListener("click", () => {
+    photoIndex = (photoIndex + 1) % photos.length;
+    updatePhoto();
+  });
+
+  $("#collapseButton").addEventListener("click", () => {
+    $(".view-card").classList.toggle("collapsed");
+  });
+
+  window.addEventListener("hashchange", () => {
+    setActiveView(location.hash.slice(1));
   });
 });
