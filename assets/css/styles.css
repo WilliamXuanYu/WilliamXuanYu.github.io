@@ -450,7 +450,7 @@ h3 {
 }
 
 .compact-card .meta {
-  margin-top: 10px;
+  margin: 0;
 }
 
 .info-card,
@@ -569,7 +569,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 12px 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -590,7 +590,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 14px;
+  justify-content: flex-end;
 }
 
 .card-links a {
@@ -601,6 +601,22 @@ h3 {
   color: var(--blue);
   font-size: 13px;
   font-weight: 850;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.card-actions .meta {
+  flex: 1 1 auto;
+}
+
+.card-actions .card-links {
+  flex: 0 0 auto;
 }
 
 .split-grid {
@@ -737,6 +753,15 @@ h3 {
   .card-topline {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .card-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .card-actions .card-links {
+    justify-content: flex-start;
   }
 
   .button {

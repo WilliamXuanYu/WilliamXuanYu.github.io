@@ -557,10 +557,11 @@ function setActiveView(view) {
 function compactCard(item, options = {}) {
   const meta = options.meta || [];
   const linkHtml = item.links?.length
-    ? `<div class="card-links">${item.links
+    ? `<nav class="card-links" aria-label="Publication links">${item.links
         .map((link) => `<a href="${link.url}" target="_blank" rel="noreferrer">${icon(link.icon)}<span>${link.label}</span></a>`)
-        .join("")}</div>`
+        .join("")}</nav>`
     : "";
+  const metaHtml = meta.length ? `<ul class="meta">${meta.map((entry) => `<li>${entry}</li>`).join("")}</ul>` : "";
   return `
     <article class="compact-card">
       <div class="card-topline">
@@ -568,12 +569,7 @@ function compactCard(item, options = {}) {
         ${options.badge ? `<span class="badge ${options.badgeClass || ""}">${options.badge}</span>` : ""}
       </div>
       <p>${item.summaryHtml || item.summary || item.desc}</p>
-      ${
-        meta.length
-          ? `<ul class="meta">${meta.map((entry) => `<li>${entry}</li>`).join("")}</ul>`
-          : ""
-      }
-      ${linkHtml}
+      ${(metaHtml || linkHtml) ? `<div class="card-actions">${metaHtml}${linkHtml}</div>` : ""}
     </article>
   `;
 }
@@ -613,7 +609,7 @@ function renderOverview() {
     t.overviewPapers,
     "publications",
     content[currentLanguage].publicationsItems
-      .map((item) => compactCard(item, { badge: item.role, meta: [item.venue, ...item.tags.slice(0, 3)] }))
+      .map((item) => compactCard(item, { badge: item.role, meta: item.tags.slice(0, 3) }))
       .join("")
   );
 
@@ -656,10 +652,11 @@ function renderResearch() {
 
 function publicationCard(item) {
   const linkHtml = item.links.length
-    ? `<div class="card-links">${item.links
+    ? `<nav class="card-links" aria-label="Publication links">${item.links
         .map((link) => `<a href="${link.url}" target="_blank" rel="noreferrer">${icon(link.icon)}<span>${link.label}</span></a>`)
-        .join("")}</div>`
+        .join("")}</nav>`
     : "";
+  const metaHtml = `<ul class="meta">${item.tags.map((tag) => `<li>${tag}</li>`).join("")}</ul>`;
 
   return `
     <article class="publication-card">
@@ -668,11 +665,7 @@ function publicationCard(item) {
         <span class="badge">${item.role}</span>
       </div>
       <p>${item.descHtml || item.desc}</p>
-      <ul class="meta">
-        <li>${item.venue}</li>
-        ${item.tags.map((tag) => `<li>${tag}</li>`).join("")}
-      </ul>
-      ${linkHtml}
+      <div class="card-actions">${metaHtml}${linkHtml}</div>
     </article>
   `;
 }
