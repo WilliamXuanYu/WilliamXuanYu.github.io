@@ -50,6 +50,7 @@ const content = {
       collaborator: "Collaborator",
       noResults: "No matching publications.",
       viewAll: "View all",
+      details: "Details",
       overviewBio: "Bio",
       overviewPapers: "Selected Publications",
       overviewPatents: "Related Patents",
@@ -303,6 +304,7 @@ const content = {
       collaborator: "合作作者",
       noResults: "没有匹配的论文。",
       viewAll: "查看全部",
+      details: "Details",
       overviewBio: "个人简介",
       overviewPapers: "代表论文",
       overviewPatents: "相关专利",
@@ -554,6 +556,11 @@ function setActiveView(view) {
 
 function compactCard(item, options = {}) {
   const meta = options.meta || [];
+  const linkHtml = item.links?.length
+    ? `<div class="card-links">${item.links
+        .map((link) => `<a href="${link.url}" target="_blank" rel="noreferrer">${icon(link.icon)}<span>${link.label}</span></a>`)
+        .join("")}</div>`
+    : "";
   return `
     <article class="compact-card">
       <div class="card-topline">
@@ -566,6 +573,7 @@ function compactCard(item, options = {}) {
           ? `<ul class="meta">${meta.map((entry) => `<li>${entry}</li>`).join("")}</ul>`
           : ""
       }
+      ${linkHtml}
     </article>
   `;
 }
@@ -575,7 +583,7 @@ function overviewSection(title, view, body) {
     <section class="overview-section">
       <div class="overview-section-header">
         <h3>${title}</h3>
-        <a href="#${view}" data-overview-jump="${view}">${content[currentLanguage].ui.viewAll}</a>
+        <a href="#${view}" data-overview-jump="${view}">${content[currentLanguage].ui.details}</a>
       </div>
       <div class="overview-feature-list">${body}</div>
     </section>
