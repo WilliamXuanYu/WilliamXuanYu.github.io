@@ -23,7 +23,7 @@ const content = {
       affiliationLabel: "Affiliation",
       affiliation: "USTC, Department of Automation",
       focusLabel: "Focus",
-      focus: "Autonomous Driving Planning and VLA",
+      focus: "Autonomous Driving and Embodied Intelligence",
       highlightsLabel: "Highlights",
       highlights: "6 papers, 3 patents, 2x National Scholarship",
       emailLabel: "Email"
@@ -60,12 +60,12 @@ const content = {
       {
         title: "Bio",
         desc:
-          "I am a graduate student in the Department of Automation at the University of Science and Technology of China. My research focuses on end-to-end autonomous driving, especially planning, evaluation, VLA systems, and latency-aware decision making."
+          "I am a graduate student in the Department of Automation at the University of Science and Technology of China. My research focuses on end-to-end autonomous driving and embodied intelligence, especially planning, evaluation, VLA systems, and latency-aware decision making."
       },
       {
         title: "Research Keywords",
         desc:
-          "Autonomous driving planning, vision-language-action models, closed-loop evaluation, fast-slow systems, trajectory ranking, model deployment, edge optimization."
+          "Autonomous driving planning, embodied intelligence, vision-language-action models, closed-loop evaluation, fast-slow systems, trajectory ranking, model deployment, edge optimization."
       }
     ],
     researchItems: [
@@ -277,7 +277,7 @@ const content = {
       affiliationLabel: "单位",
       affiliation: "中国科学技术大学自动化系",
       focusLabel: "方向",
-      focus: "自动驾驶规划与 VLA",
+      focus: "自动驾驶和具身智能",
       highlightsLabel: "亮点",
       highlights: "6 篇论文，3 项相关专利，2 次国家奖学金",
       emailLabel: "邮箱"
@@ -314,12 +314,12 @@ const content = {
       {
         title: "个人简介",
         desc:
-          "我是中国科学技术大学自动化系硕士研究生，目前研究集中在端到端自动驾驶，尤其是规划、评估、VLA 系统和延迟感知决策。"
+          "我是中国科学技术大学自动化系硕士研究生，目前研究集中在端到端自动驾驶和具身智能，尤其是规划、评估、VLA 系统和延迟感知决策。"
       },
       {
         title: "研究关键词",
         desc:
-          "自动驾驶规划、视觉-语言-动作模型、闭环评估、快慢系统、轨迹排序、模型部署、边缘优化。"
+          "自动驾驶规划、具身智能、视觉-语言-动作模型、闭环评估、快慢系统、轨迹排序、模型部署、边缘优化。"
       }
     ],
     researchItems: [
