@@ -112,7 +112,7 @@ const content = {
         title: "ASSCG: Just-Right Gating over Chattering for Fast-Slow LLM Planning in Autonomous Driving",
         type: "first",
         role: "First author",
-        venue: "ECCV 2026 Accepted",
+        venue: "ECCV'26",
         summary:
           "A frame-level controller for fast-slow LLM planning; improves nuPlan Hard20 score from 65.00 to 67.28 while reducing average per-frame latency from 0.80s to 0.32s.",
         desc:
@@ -136,7 +136,7 @@ const content = {
         title: "DriveFine: Refining-Augmented Masked Diffusion VLA for Precise and Robust Driving",
         type: "collab",
         role: "Second author",
-        venue: "ECCV 2026 Accepted",
+        venue: "ECCV'26",
         summary:
           "A masked-diffusion VLA model with block-level MoE refinement and hybrid RL, improving effectiveness and robustness on NAVSIM v1/v2 and NavHard.",
         desc:
@@ -159,16 +159,16 @@ const content = {
       {
         title: "Deployment and Optimization of MapTR-based Lane Detection on Huawei MDC610",
         type: "first",
-        role: "First author / Oral presentation",
+        role: "First author",
         venue: "IEEE CCDC Oral",
         summary:
-          "Deployment and optimization of MapTR-based lane detection on Huawei MDC610; MapTR inference reduced from 958ms to 220ms and the work was selected as an IEEE CCDC oral presentation.",
+          "Deployment and optimization of MapTR-based lane detection on Huawei MDC610; MapTR inference reduced from 958ms to 220ms and the work was selected for IEEE CCDC oral.",
         summaryHtml:
-          "Deployment and optimization of MapTR-based lane detection on Huawei MDC610; MapTR inference reduced from 958ms to 220ms and the work was selected as an <strong>IEEE CCDC oral presentation</strong>.",
+          "Deployment and optimization of MapTR-based lane detection on Huawei MDC610; MapTR inference reduced from 958ms to 220ms and the work was selected for <strong>IEEE CCDC oral</strong>.",
         desc:
-          "This work reports the deployment and optimization of MapTR-based lane detection on Huawei MDC610, covering model adaptation, graph optimization, quantization, and platform-specific operator support for edge deployment. Through deep adaptation and optimization, MapTR inference time was reduced from 958ms to 220ms. The work was selected as an IEEE CCDC oral presentation.",
+          "This work reports the deployment and optimization of MapTR-based lane detection on Huawei MDC610, covering model adaptation, graph optimization, quantization, and platform-specific operator support for edge deployment. Through deep adaptation and optimization, MapTR inference time was reduced from 958ms to 220ms. The work was selected for IEEE CCDC oral.",
         descHtml:
-          "This work reports the deployment and optimization of MapTR-based lane detection on Huawei MDC610, covering model adaptation, graph optimization, quantization, and platform-specific operator support for edge deployment. Through deep adaptation and optimization, MapTR inference time was reduced from 958ms to 220ms. The work was selected as an <strong>IEEE CCDC oral presentation</strong>.",
+          "This work reports the deployment and optimization of MapTR-based lane detection on Huawei MDC610, covering model adaptation, graph optimization, quantization, and platform-specific operator support for edge deployment. Through deep adaptation and optimization, MapTR inference time was reduced from 958ms to 220ms. The work was selected for <strong>IEEE CCDC oral</strong>.",
         tags: ["Huawei MDC610 deployment", "MapTR 958ms to 220ms", "Edge optimization", "IEEE CCDC Oral"],
         links: []
       }
@@ -204,13 +204,13 @@ const content = {
         title: "Autonomous Driving Multi-Sensor Perception and Fusion Algorithm 2.0",
         meta: "JAC / Huawei collaborative project",
         summary:
-          "Edge deployment and optimization of BEVFormer, MapTR v1/v2, FastBEV, FlashOCC, Sparse4D and related algorithms on Huawei MDC610 / MDC610 Pro; MapTR inference reduced from 958ms to 220ms, with an IEEE CCDC oral presentation.",
+          "Edge deployment and optimization of BEVFormer, MapTR v1/v2, FastBEV, FlashOCC, Sparse4D and related algorithms on Huawei MDC610 / MDC610 Pro; MapTR inference reduced from 958ms to 220ms, selected for IEEE CCDC oral.",
         summaryHtml:
-          "Edge deployment and optimization of BEVFormer, MapTR v1/v2, FastBEV, FlashOCC, Sparse4D and related algorithms on Huawei MDC610 / MDC610 Pro; MapTR inference reduced from 958ms to 220ms, with an <strong>IEEE CCDC oral presentation</strong>.",
+          "Edge deployment and optimization of BEVFormer, MapTR v1/v2, FastBEV, FlashOCC, Sparse4D and related algorithms on Huawei MDC610 / MDC610 Pro; MapTR inference reduced from 958ms to 220ms, selected for <strong>IEEE CCDC oral</strong>.",
         desc:
-          "Worked on edge deployment of autonomous-driving algorithms on Huawei Ascend MDC610 / MDC610 Pro platforms, including graph optimization, quantization, and custom operator adaptation. Completed adaptation and deployment for BEVFormer, MapTR v1/v2, FastBEV, FlashOCC, Sparse4D, and related models. Performed deep adaptation and optimization for MapTR, reducing inference time from 958ms to 220ms. This work was presented at IEEE CCDC as “Deployment and Optimization of MapTR-based Lane Detection on Huawei MDC610” and selected as an oral presentation.",
+          "Worked on edge deployment of autonomous-driving algorithms on Huawei Ascend MDC610 / MDC610 Pro platforms, including graph optimization, quantization, and custom operator adaptation. Completed adaptation and deployment for BEVFormer, MapTR v1/v2, FastBEV, FlashOCC, Sparse4D, and related models. Performed deep adaptation and optimization for MapTR, reducing inference time from 958ms to 220ms. This work was presented at IEEE CCDC as “Deployment and Optimization of MapTR-based Lane Detection on Huawei MDC610” and selected for oral.",
         descHtml:
-          "Worked on edge deployment of autonomous-driving algorithms on Huawei Ascend MDC610 / MDC610 Pro platforms, including graph optimization, quantization, and custom operator adaptation. Completed adaptation and deployment for BEVFormer, MapTR v1/v2, FastBEV, FlashOCC, Sparse4D, and related models. Performed deep adaptation and optimization for MapTR, reducing inference time from 958ms to 220ms. This work was presented at IEEE CCDC as “Deployment and Optimization of MapTR-based Lane Detection on Huawei MDC610” and selected as an <strong>oral presentation</strong>.",
+          "Worked on edge deployment of autonomous-driving algorithms on Huawei Ascend MDC610 / MDC610 Pro platforms, including graph optimization, quantization, and custom operator adaptation. Completed adaptation and deployment for BEVFormer, MapTR v1/v2, FastBEV, FlashOCC, Sparse4D, and related models. Performed deep adaptation and optimization for MapTR, reducing inference time from 958ms to 220ms. This work was presented at IEEE CCDC as “Deployment and Optimization of MapTR-based Lane Detection on Huawei MDC610” and selected for <strong>oral</strong>.",
         tags: ["Huawei MDC610 deployment", "Model adaptation", "MapTR 958ms to 220ms", "IEEE CCDC Oral"]
       },
       {
@@ -366,7 +366,7 @@ const content = {
         title: "ASSCG: Just-Right Gating over Chattering for Fast-Slow LLM Planning in Autonomous Driving",
         type: "first",
         role: "第一作者",
-        venue: "ECCV 2026 Accepted",
+        venue: "ECCV'26",
         summary:
           "用于快慢 LLM 自动驾驶规划的帧级门控控制器；nuPlan Hard20 评分从 65.00 提升至 67.28，平均每帧延迟从 0.80 秒降至 0.32 秒。",
         desc:
@@ -390,7 +390,7 @@ const content = {
         title: "DriveFine: Refining-Augmented Masked Diffusion VLA for Precise and Robust Driving",
         type: "collab",
         role: "第二作者",
-        venue: "ECCV 2026 Accepted",
+        venue: "ECCV'26",
         summary:
           "结合块级 MoE 精炼专家和混合强化学习的掩码扩散 VLA 模型，在 NAVSIM v1/v2 和 NavHard 上展现有效性与鲁棒性。",
         desc:
@@ -413,16 +413,16 @@ const content = {
       {
         title: "Deployment and Optimization of MapTR-based Lane Detection on Huawei MDC610",
         type: "first",
-        role: "第一作者 / Oral 汇报",
+        role: "第一作者",
         venue: "IEEE CCDC Oral",
         summary:
-          "MapTR-based 车道检测在华为 MDC610 平台上的部署与优化；MapTR 推理时间从 958ms 优化至 220ms，相关工作入选 IEEE CCDC oral 汇报。",
+          "MapTR-based 车道检测在华为 MDC610 平台上的部署与优化；MapTR 推理时间从 958ms 优化至 220ms，相关工作入选 IEEE CCDC oral。",
         summaryHtml:
-          "MapTR-based 车道检测在华为 MDC610 平台上的部署与优化；MapTR 推理时间从 958ms 优化至 220ms，相关工作入选 <strong>IEEE CCDC oral 汇报</strong>。",
+          "MapTR-based 车道检测在华为 MDC610 平台上的部署与优化；MapTR 推理时间从 958ms 优化至 220ms，相关工作入选 <strong>IEEE CCDC oral</strong>。",
         desc:
-          "该工作汇报了 MapTR-based 车道检测在华为 MDC610 平台上的部署与优化，覆盖模型适配、图优化、量化和面向边缘部署的平台算子支持等内容。通过深度适配与优化，MapTR 推理时间从 958ms 优化至 220ms。相关工作入选 IEEE CCDC oral 汇报。",
+          "该工作汇报了 MapTR-based 车道检测在华为 MDC610 平台上的部署与优化，覆盖模型适配、图优化、量化和面向边缘部署的平台算子支持等内容。通过深度适配与优化，MapTR 推理时间从 958ms 优化至 220ms。相关工作入选 IEEE CCDC oral。",
         descHtml:
-          "该工作汇报了 MapTR-based 车道检测在华为 MDC610 平台上的部署与优化，覆盖模型适配、图优化、量化和面向边缘部署的平台算子支持等内容。通过深度适配与优化，MapTR 推理时间从 958ms 优化至 220ms。相关工作入选 <strong>IEEE CCDC oral 汇报</strong>。",
+          "该工作汇报了 MapTR-based 车道检测在华为 MDC610 平台上的部署与优化，覆盖模型适配、图优化、量化和面向边缘部署的平台算子支持等内容。通过深度适配与优化，MapTR 推理时间从 958ms 优化至 220ms。相关工作入选 <strong>IEEE CCDC oral</strong>。",
         tags: ["华为 MDC610 部署", "MapTR 958ms 到 220ms", "边缘优化", "IEEE CCDC Oral"],
         links: []
       }
@@ -458,13 +458,13 @@ const content = {
         title: "自动驾驶多传感器感知与融合算法 2.0",
         meta: "江淮 / 华为合作项目",
         summary:
-          "在华为 MDC610 / MDC610 Pro 平台部署并优化 BEVFormer、MapTR v1/v2、FastBEV、FlashOCC、Sparse4D 等算法；MapTR 推理时间从 958ms 优化至 220ms，相关工作入选 IEEE CCDC oral 汇报。",
+          "在华为 MDC610 / MDC610 Pro 平台部署并优化 BEVFormer、MapTR v1/v2、FastBEV、FlashOCC、Sparse4D 等算法；MapTR 推理时间从 958ms 优化至 220ms，相关工作入选 IEEE CCDC oral。",
         summaryHtml:
-          "在华为 MDC610 / MDC610 Pro 平台部署并优化 BEVFormer、MapTR v1/v2、FastBEV、FlashOCC、Sparse4D 等算法；MapTR 推理时间从 958ms 优化至 220ms，相关工作入选 <strong>IEEE CCDC oral 汇报</strong>。",
+          "在华为 MDC610 / MDC610 Pro 平台部署并优化 BEVFormer、MapTR v1/v2、FastBEV、FlashOCC、Sparse4D 等算法；MapTR 推理时间从 958ms 优化至 220ms，相关工作入选 <strong>IEEE CCDC oral</strong>。",
         desc:
-          "参与自动驾驶算法在华为昇腾 MDC610 / MDC610 Pro 平台上的边缘部署，涉及图优化、量化和自定义算子适配。已完成 BEVFormer、MapTR v1/v2、FastBEV、FlashOCC、Sparse4D 等算法适配和部署，并对 MapTR 模型做了深度适配优化，将推理时间从 958ms 优化至 220ms。此部分内容以 “Deployment and Optimization of MapTR-based Lane Detection on Huawei MDC610” 为题在 IEEE CCDC（The 38th Chinese Control and Decision Conference）会议汇报，并获得 oral。",
+          "参与自动驾驶算法在华为昇腾 MDC610 / MDC610 Pro 平台上的边缘部署，涉及图优化、量化和自定义算子适配。已完成 BEVFormer、MapTR v1/v2、FastBEV、FlashOCC、Sparse4D 等算法适配和部署，并对 MapTR 模型做了深度适配优化，将推理时间从 958ms 优化至 220ms。此部分内容以 “Deployment and Optimization of MapTR-based Lane Detection on Huawei MDC610” 为题在 IEEE CCDC（The 38th Chinese Control and Decision Conference）获得 oral。",
         descHtml:
-          "参与自动驾驶算法在华为昇腾 MDC610 / MDC610 Pro 平台上的边缘部署，涉及图优化、量化和自定义算子适配。已完成 BEVFormer、MapTR v1/v2、FastBEV、FlashOCC、Sparse4D 等算法适配和部署，并对 MapTR 模型做了深度适配优化，将推理时间从 958ms 优化至 220ms。此部分内容以 “Deployment and Optimization of MapTR-based Lane Detection on Huawei MDC610” 为题在 IEEE CCDC（The 38th Chinese Control and Decision Conference）会议汇报，并获得 <strong>oral</strong>。",
+          "参与自动驾驶算法在华为昇腾 MDC610 / MDC610 Pro 平台上的边缘部署，涉及图优化、量化和自定义算子适配。已完成 BEVFormer、MapTR v1/v2、FastBEV、FlashOCC、Sparse4D 等算法适配和部署，并对 MapTR 模型做了深度适配优化，将推理时间从 958ms 优化至 220ms。此部分内容以 “Deployment and Optimization of MapTR-based Lane Detection on Huawei MDC610” 为题在 IEEE CCDC（The 38th Chinese Control and Decision Conference）获得 <strong>oral</strong>。",
         tags: ["华为 MDC610 部署", "模型适配", "MapTR 958ms 到 220ms", "IEEE CCDC Oral"]
       },
       {
