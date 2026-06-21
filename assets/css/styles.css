@@ -547,6 +547,13 @@ h3 {
   margin-bottom: 8px;
 }
 
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
 .badge {
   display: inline-flex;
   align-items: center;
@@ -563,6 +570,11 @@ h3 {
 .badge.green {
   background: var(--accent-soft);
   color: var(--accent-strong);
+}
+
+.badge.muted {
+  background: var(--surface-muted);
+  color: var(--muted);
 }
 
 .meta {

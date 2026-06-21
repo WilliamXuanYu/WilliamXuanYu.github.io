@@ -95,7 +95,7 @@ const content = {
         title: "CLOVER: Closed-Loop Value Estimation and Ranking for End-to-End Autonomous Driving Planning",
         type: "first",
         role: "First author",
-        venue: "arXiv, 2026",
+        venue: "Under Review",
         summary:
           "Closed-loop value estimation and ranking for end-to-end planning; NAVSIM leaderboard best solution (94.5 PDMS), surpassing or matching previous SOTA methods on NAVSIM v1/v2, NavHard, and nuScenes.",
         summaryHtml:
@@ -112,7 +112,7 @@ const content = {
         title: "ASSCG: Just-Right Gating over Chattering for Fast-Slow LLM Planning in Autonomous Driving",
         type: "first",
         role: "First author",
-        venue: "Preprint in preparation",
+        venue: "ECCV 2026 Accepted",
         summary:
           "A frame-level controller for fast-slow LLM planning; improves nuPlan Hard20 score from 65.00 to 67.28 while reducing average per-frame latency from 0.80s to 0.32s.",
         desc:
@@ -124,7 +124,7 @@ const content = {
         title: "From Representational Complementarity to Dual Systems: Synergizing VLM and Vision-Only Backbones for End-to-End Driving",
         type: "first",
         role: "First author",
-        venue: "arXiv, 2026",
+        venue: "Under Review",
         summary:
           "Analyzes residual complementarity between VLM and vision-only backbones and builds HybridDriveVLA / DualDriveVLA; HybridDriveVLA reaches SOTA among VLA solutions on NAVSIM while DualDriveVLA improves inference speed.",
         desc:
@@ -136,7 +136,7 @@ const content = {
         title: "DriveFine: Refining-Augmented Masked Diffusion VLA for Precise and Robust Driving",
         type: "collab",
         role: "Second author",
-        venue: "arXiv, 2026",
+        venue: "ECCV 2026 Accepted",
         summary:
           "A masked-diffusion VLA model with block-level MoE refinement and hybrid RL, improving effectiveness and robustness on NAVSIM v1/v2 and NavHard.",
         desc:
@@ -148,7 +148,7 @@ const content = {
         title: "SAMoE-VLA: A Scene Adaptive Mixture-of-Experts Vision-Language-Action Model for Autonomous Driving",
         type: "collab",
         role: "Core author",
-        venue: "arXiv, 2026",
+        venue: "Under Review",
         summary:
           "Scene-adaptive MoE routing from BEV features plus cross-modal causal attention; achieves state-of-the-art results on nuScenes open-loop planning and LangAuto closed-loop benchmarks with fewer resources.",
         desc:
@@ -160,7 +160,7 @@ const content = {
         title: "Deployment and Optimization of MapTR-based Lane Detection on Huawei MDC610",
         type: "first",
         role: "First author / Oral presentation",
-        venue: "IEEE CCDC",
+        venue: "IEEE CCDC Oral",
         summary:
           "Deployment and optimization of MapTR-based lane detection on Huawei MDC610; MapTR inference reduced from 958ms to 220ms and the work was selected as an IEEE CCDC oral presentation.",
         summaryHtml:
@@ -349,7 +349,7 @@ const content = {
         title: "CLOVER: Closed-Loop Value Estimation and Ranking for End-to-End Autonomous Driving Planning",
         type: "first",
         role: "第一作者",
-        venue: "arXiv, 2026",
+        venue: "Under Review",
         summary:
           "面向端到端自动驾驶规划的闭环价值估计与排序框架；NAVSIM leaderboard best 方案（94.5 PDMS），在 NAVSIM v1/v2、NavHard、nuScenes 基准上超过或匹配此前 SOTA 方案。",
         summaryHtml:
@@ -366,7 +366,7 @@ const content = {
         title: "ASSCG: Just-Right Gating over Chattering for Fast-Slow LLM Planning in Autonomous Driving",
         type: "first",
         role: "第一作者",
-        venue: "预印本准备中",
+        venue: "ECCV 2026 Accepted",
         summary:
           "用于快慢 LLM 自动驾驶规划的帧级门控控制器；nuPlan Hard20 评分从 65.00 提升至 67.28，平均每帧延迟从 0.80 秒降至 0.32 秒。",
         desc:
@@ -378,7 +378,7 @@ const content = {
         title: "From Representational Complementarity to Dual Systems: Synergizing VLM and Vision-Only Backbones for End-to-End Driving",
         type: "first",
         role: "第一作者",
-        venue: "arXiv, 2026",
+        venue: "Under Review",
         summary:
           "分析 VLM 与纯视觉主干的残余互补性并构建 HybridDriveVLA / DualDriveVLA；HybridDriveVLA 获得 NAVSIM 基准上 VLA 方案 SOTA 表现，DualDriveVLA 显著提升平均推理速度。",
         desc:
@@ -390,7 +390,7 @@ const content = {
         title: "DriveFine: Refining-Augmented Masked Diffusion VLA for Precise and Robust Driving",
         type: "collab",
         role: "第二作者",
-        venue: "arXiv, 2026",
+        venue: "ECCV 2026 Accepted",
         summary:
           "结合块级 MoE 精炼专家和混合强化学习的掩码扩散 VLA 模型，在 NAVSIM v1/v2 和 NavHard 上展现有效性与鲁棒性。",
         desc:
@@ -402,7 +402,7 @@ const content = {
         title: "SAMoE-VLA: A Scene Adaptive Mixture-of-Experts Vision-Language-Action Model for Autonomous Driving",
         type: "collab",
         role: "核心作者",
-        venue: "arXiv, 2026",
+        venue: "Under Review",
         summary:
           "从 BEV 场景特征推导 MoE 路由并结合跨模态因果注意力，在 nuScenes 开环规划和 LangAuto 闭环基准上以更少资源达到先进性能。",
         desc:
@@ -414,7 +414,7 @@ const content = {
         title: "Deployment and Optimization of MapTR-based Lane Detection on Huawei MDC610",
         type: "first",
         role: "第一作者 / Oral 汇报",
-        venue: "IEEE CCDC",
+        venue: "IEEE CCDC Oral",
         summary:
           "MapTR-based 车道检测在华为 MDC610 平台上的部署与优化；MapTR 推理时间从 958ms 优化至 220ms，相关工作入选 IEEE CCDC oral 汇报。",
         summaryHtml:
@@ -562,16 +562,27 @@ function compactCard(item, options = {}) {
         .join("")}</nav>`
     : "";
   const metaHtml = meta.length ? `<ul class="meta">${meta.map((entry) => `<li>${entry}</li>`).join("")}</ul>` : "";
+  const badgeHtml = [options.badge, options.secondaryBadge]
+    .filter(Boolean)
+    .map((badge, index) => {
+      const badgeClass = index === 0 ? options.badgeClass || "" : options.secondaryBadgeClass || "";
+      return `<span class="badge ${badgeClass}">${badge}</span>`;
+    })
+    .join("");
   return `
     <article class="compact-card">
       <div class="card-topline">
         <h3>${item.title}</h3>
-        ${options.badge ? `<span class="badge ${options.badgeClass || ""}">${options.badge}</span>` : ""}
+        ${badgeHtml ? `<div class="badge-row">${badgeHtml}</div>` : ""}
       </div>
       <p>${item.summaryHtml || item.summary || item.desc}</p>
       ${(metaHtml || linkHtml) ? `<div class="card-actions">${metaHtml}${linkHtml}</div>` : ""}
     </article>
   `;
+}
+
+function venueBadgeClass(venue) {
+  return venue === "Under Review" ? "muted" : "green";
 }
 
 function overviewSection(title, view, body) {
@@ -609,7 +620,14 @@ function renderOverview() {
     t.overviewPapers,
     "publications",
     content[currentLanguage].publicationsItems
-      .map((item) => compactCard(item, { badge: item.role, meta: item.tags.slice(0, 3) }))
+      .map((item) =>
+        compactCard(item, {
+          badge: item.role,
+          secondaryBadge: item.venue,
+          secondaryBadgeClass: venueBadgeClass(item.venue),
+          meta: item.tags.slice(0, 3)
+        })
+      )
       .join("")
   );
 
@@ -657,12 +675,16 @@ function publicationCard(item) {
         .join("")}</nav>`
     : "";
   const metaHtml = `<ul class="meta">${item.tags.map((tag) => `<li>${tag}</li>`).join("")}</ul>`;
+  const venueClass = venueBadgeClass(item.venue);
 
   return `
     <article class="publication-card">
       <div class="card-topline">
         <h3>${item.title}</h3>
-        <span class="badge">${item.role}</span>
+        <div class="badge-row">
+          <span class="badge">${item.role}</span>
+          <span class="badge ${venueClass}">${item.venue}</span>
+        </div>
       </div>
       <p>${item.descHtml || item.desc}</p>
       <div class="card-actions">${metaHtml}${linkHtml}</div>
