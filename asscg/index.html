@@ -87,6 +87,23 @@
         </div>
       </section>
 
+      <section class="section video-section">
+        <div class="section-heading">
+          <p>Demo</p>
+          <h2>Adaptive querying in closed-loop driving</h2>
+        </div>
+        <div class="video-card">
+          <video controls preload="metadata" poster="../assets/img/asscg/asscg-intervals.png">
+            <source src="../assets/video/asscg-demo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <p class="section-note">
+          The demo video is compressed for web playback. It is stored directly in this GitHub Pages site as a static
+          MP4 asset.
+        </p>
+      </section>
+
       <section class="section">
         <div class="section-heading">
           <p>Problem</p>
@@ -209,6 +226,26 @@
           <p>Analysis</p>
           <h2>Equivalent, failure, and effective intervals</h2>
         </div>
+        <div class="card-grid interval-grid">
+          <article class="insight-card">
+            <h3>Equivalent Interval</h3>
+            <p>
+              Re-querying the slow system yields negligible closed-loop change, so cached guidance remains sufficient.
+            </p>
+          </article>
+          <article class="insight-card danger">
+            <h3>Failure Interval</h3>
+            <p>
+              Slow guidance can actively hurt the trajectory. ASSCG can choose Drop to suppress the cached slow feature.
+            </p>
+          </article>
+          <article class="insight-card success">
+            <h3>Effective Interval</h3>
+            <p>
+              The current slow guidance improves behavior and should be reused until its value decays or context changes.
+            </p>
+          </article>
+        </div>
         <figure class="figure-card">
           <img
             src="../assets/img/asscg/asscg-intervals.png"
@@ -259,6 +296,107 @@
             </li>
           </ol>
         </article>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p>Results</p>
+          <h2>Improved performance-efficiency trade-offs</h2>
+        </div>
+        <div class="results-grid">
+          <article class="result-table-card">
+            <h3>nuPlan Hard20 closed-loop evaluation</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>Score</th>
+                  <th>Latency</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>AsyncDriver</td>
+                  <td>65.00</td>
+                  <td>0.80 s/frame</td>
+                </tr>
+                <tr>
+                  <td>AsyncDriver, 5-frame interval</td>
+                  <td>64.27</td>
+                  <td>0.32 s/frame</td>
+                </tr>
+                <tr class="highlight-row">
+                  <td>AdaptiveAsyncDriver (ASSCG)</td>
+                  <td>67.28</td>
+                  <td>0.32 s/frame</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              ASSCG improves the score by +2.28 over AsyncDriver while matching the latency of a fixed 5-frame
+              interval baseline.
+            </p>
+          </article>
+
+          <article class="result-table-card">
+            <h3>NAVSIM fast-slow dual system</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>PDMS</th>
+                  <th>Latency</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ReCogDrive</td>
+                  <td>90.8</td>
+                  <td>~350 ms</td>
+                </tr>
+                <tr class="highlight-row">
+                  <td>RecogDrive-based dual system + ASSCG</td>
+                  <td>91.4</td>
+                  <td>~270 ms</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              The same gating principle transfers to NAVSIM, improving PDMS by +0.6 while reducing wall-clock
+              inference latency.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p>Ablations</p>
+          <h2>Why the design choices matter</h2>
+        </div>
+        <div class="card-grid dense">
+          <article class="insight-card">
+            <h3>GRPO improves closed-loop score</h3>
+            <p>
+              Starting from supervised pseudo-labels gives a usable gate, while GRPO-style fine-tuning optimizes the
+              policy directly for closed-loop reward under query cost.
+            </p>
+          </article>
+          <article class="insight-card">
+            <h3>RWKV keeps long-horizon gating efficient</h3>
+            <p>
+              Compared with Transformer-style attention, RWKV provides a compact recurrent state and lower last-frame
+              gate latency for long scenes.
+            </p>
+          </article>
+          <article class="insight-card">
+            <h3>Drop is not just a speed trick</h3>
+            <p>
+              The Drop action suppresses cached slow guidance during failure intervals, improving robustness beyond
+              simply reducing query frequency.
+            </p>
+          </article>
+        </div>
       </section>
     </main>
   </body>

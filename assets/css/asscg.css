@@ -254,6 +254,26 @@ h2 {
   font-size: 17px;
 }
 
+.section-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.video-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #07111d;
+}
+
+.video-card video {
+  display: block;
+  width: 100%;
+  max-height: 680px;
+  background: #07111d;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -281,6 +301,68 @@ h2 {
 
 .card-grid.dense .insight-card {
   background: var(--surface-soft);
+}
+
+.interval-grid {
+  margin-bottom: 18px;
+}
+
+.insight-card.danger {
+  background: #fff4f3;
+}
+
+.insight-card.success {
+  background: #effaf5;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.result-table-card {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.result-table-card h3 {
+  margin: 0 0 12px;
+  font-size: 19px;
+}
+
+.result-table-card p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th,
+td {
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.highlight-row td {
+  color: var(--teal);
+  font-weight: 850;
 }
 
 .figure-card {
@@ -354,6 +436,7 @@ li + li {
   .hero-grid,
   .summary-band,
   .card-grid,
+  .results-grid,
   .two-column {
     grid-template-columns: 1fr;
   }
