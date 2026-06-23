@@ -16,35 +16,51 @@
     <main>
       <section class="hero">
         <div class="hero-inner">
-          <div class="paper-meta">
-            <span>ECCV'26</span>
-            <span>Autonomous Driving</span>
-            <span>Fast-Slow LLM Planning</span>
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <div class="paper-meta">
+                <span>ECCV'26</span>
+                <span>Autonomous Driving</span>
+                <span>Fast-Slow LLM Planning</span>
+              </div>
+
+              <h1>ASSCG: Just-Right Gating over Chattering for Fast-Slow LLM Planning in Autonomous Driving</h1>
+
+              <p class="authors">
+                <strong>Sining Ang</strong>, Yuan Chen, Haiyan Liu, Xuanyao Mao, Jason Bao, Xuliang, Bingchuan Sun,
+                Yan Wang
+              </p>
+
+              <p class="affiliations">
+                Institute for AI Industry Research, Tsinghua University · University of Science and Technology of China ·
+                Beihang University · Lenovo Group Limited
+              </p>
+
+              <p class="hero-summary">
+                A lightweight gate for deciding when a fast-slow autonomous driving planner should query an LLM,
+                reuse cached guidance, or drop unreliable slow-system outputs under a compute budget.
+              </p>
+
+              <nav class="actions" aria-label="Paper resources">
+                <a class="button primary is-disabled" href="#" aria-disabled="true" onclick="return false;">arXiv</a>
+                <a class="button is-disabled" href="#" aria-disabled="true" onclick="return false;">Code</a>
+              </nav>
+            </div>
+
+            <aside class="teaser-panel" aria-label="ASSCG method preview">
+              <img
+                src="../assets/img/asscg/asscg-architecture.png"
+                alt="Compact preview of the ASSCG architecture"
+              />
+              <div>
+                <h2>Query · Cache · Drop</h2>
+                <p>
+                  ASSCG learns frame-level slow-system control instead of using fixed intervals or hand-designed
+                  difficulty triggers.
+                </p>
+              </div>
+            </aside>
           </div>
-
-          <h1>
-            ASSCG: Just-Right Gating<br class="mobile-break" />
-            over Chattering for Fast-Slow<br class="mobile-break" />
-            LLM Planning in Autonomous Driving
-          </h1>
-
-          <p class="authors">
-            <strong>Sining Ang</strong>, Yuan Chen, Haiyan Liu,<br class="mobile-break" />
-            Xuanyao Mao, Jason Bao, Xuliang,<br class="mobile-break" />
-            Bingchuan Sun, Yan Wang
-          </p>
-
-          <p class="affiliations">
-            Institute for AI Industry Research<br class="mobile-break" />
-            · Tsinghua University<br class="mobile-break" />
-            · University of Science and Technology of China<br class="mobile-break" />
-            · Beihang University · Lenovo Group Limited
-          </p>
-
-          <nav class="actions" aria-label="Paper resources">
-            <a class="button primary is-disabled" href="#" aria-disabled="true" onclick="return false;">arXiv</a>
-            <a class="button is-disabled" href="#" aria-disabled="true" onclick="return false;">Code</a>
-          </nav>
         </div>
       </section>
 
@@ -52,25 +68,59 @@
         <div>
           <strong>67.28</strong>
           <span>nuPlan Hard20 score</span>
+          <small>+2.28 absolute</small>
         </div>
         <div>
           <strong>~60%</strong>
           <span>latency reduction</span>
+          <small>-</small>
         </div>
         <div>
           <strong>91.4</strong>
           <span>NAVSIM PDMS</span>
+          <small>+0.6 absolute</small>
         </div>
         <div>
           <strong>~25%</strong>
           <span>average speed gain</span>
+          <small>-</small>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p>Problem</p>
+          <h2>Slow reasoning is useful, but not always worth querying</h2>
+        </div>
+        <div class="card-grid">
+          <article class="insight-card">
+            <h3>Fixed intervals miss temporal variation</h3>
+            <p>
+              Triggering the slow module at a fixed frequency wastes compute in easy segments and may miss the moments
+              where slow reasoning is most useful.
+            </p>
+          </article>
+          <article class="insight-card">
+            <h3>Difficulty proxies can chatter</h3>
+            <p>
+              Heuristic complexity estimates do not necessarily align with the marginal utility of slow guidance,
+              causing unnecessary oscillation and mis-timed queries.
+            </p>
+          </article>
+          <article class="insight-card">
+            <h3>ASSCG learns the invocation policy</h3>
+            <p>
+              We cast slow-module control as sequence generation and train a frame-level controller to choose Query,
+              Cache, or Drop actions.
+            </p>
+          </article>
         </div>
       </section>
 
       <section class="section figure-section">
         <div class="section-heading">
           <p>Method</p>
-          <h2>Adaptive Slow-System<br class="mobile-break" /> Control Gate</h2>
+          <h2>Adaptive Slow-System Control Gate</h2>
         </div>
         <figure class="figure-card">
           <img
@@ -122,6 +172,36 @@
             <li>Model-agnostic fast-slow planning controller</li>
           </ul>
         </aside>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p>Training and Evaluation</p>
+          <h2>From supervised labels to compute-aware reinforcement fine-tuning</h2>
+        </div>
+        <div class="card-grid dense">
+          <article class="insight-card">
+            <h3>Sequence-generation gate</h3>
+            <p>
+              Each frame is represented as a gating token prediction problem, enabling long-horizon temporal modeling
+              with an RWKV backbone.
+            </p>
+          </article>
+          <article class="insight-card">
+            <h3>SFT to GRPO-style optimization</h3>
+            <p>
+              ASSCG starts from supervised pseudo-labels and is then fine-tuned with a compute-aware objective that
+              balances planning quality against slow-query cost.
+            </p>
+          </article>
+          <article class="insight-card">
+            <h3>Two fast-slow instantiations</h3>
+            <p>
+              We evaluate on AsyncDriver with nuPlan Hard20 closed-loop testing and on a RecogDrive-based dual system
+              with NAVSIM PDMS and speed measurements.
+            </p>
+          </article>
+        </div>
       </section>
 
       <section class="section figure-section">
