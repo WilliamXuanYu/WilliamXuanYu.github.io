@@ -118,7 +118,7 @@ const content = {
         desc:
           "ASSCG is a frame-level controller for fast-slow autonomous driving systems. It decides when to query a slower LLM planner, reuse cached guidance, or suppress unstable outputs. The decision problem is modeled as sequence generation with an RWKV backbone, trained by supervised fine-tuning from fixed-schedule pseudo-labels and then optimized with a computation-aware GRPO-style reinforcement learning objective. Integrated into AsyncDriver on nuPlan Hard20, ASSCG improves the score from 65.00 to 67.28 and reduces average per-frame latency from 0.80s to 0.32s. In a RecogDrive-based dual-system architecture on NAVSIM, it also improves both PDMS and speed, with interval analysis explaining when to query or suppress the slow LLM system.",
         tags: ["Fast-slow LLM planning", "Latency-aware gating", "nuPlan Hard20 improvement", "Query suppression"],
-        links: []
+        links: [{ label: "Project", url: "/asscg/", icon: "external-link" }]
       },
       {
         title: "From Representational Complementarity to Dual Systems: Synergizing VLM and Vision-Only Backbones for End-to-End Driving",
@@ -372,7 +372,7 @@ const content = {
         desc:
           "ASSCG 是一种用于快慢自动驾驶系统的帧级控制器，用于决定何时查询慢速 LLM 规划器、复用缓存指导或抑制其输出。该决策问题被建模为序列生成任务，并采用 RWKV 主干网络实现；门控机制先通过固定调度策略生成的伪标签进行监督微调，随后利用考虑计算成本的 GRPO 风格强化学习目标进行优化。在 nuPlan Hard20 基准测试中，将 ASSCG 集成至 AsyncDriver 后，评分从 65.00 提升至 67.28，同时平均每帧延迟从 0.80 秒降至 0.32 秒。在 NAVSIM 标准上，基于 RecogDrive 的双系统架构中，该门控机制使 PDMS 指标和速度均有提升。此外，论文还提供了等效区间、有效区间、失效区间的区间分析，以论证何时应查询或抑制 LLM 慢系统。",
         tags: ["快慢 LLM 规划", "延迟感知门控", "nuPlan Hard20 提升", "查询抑制"],
-        links: []
+        links: [{ label: "Project", url: "/asscg/", icon: "external-link" }]
       },
       {
         title: "From Representational Complementarity to Dual Systems: Synergizing VLM and Vision-Only Backbones for End-to-End Driving",

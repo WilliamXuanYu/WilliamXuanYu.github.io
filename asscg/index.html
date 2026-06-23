@@ -93,7 +93,7 @@
           <h2>Adaptive querying in closed-loop driving</h2>
         </div>
         <div class="video-card">
-          <video controls preload="metadata" poster="../assets/img/asscg/asscg-intervals.png">
+          <video id="demoVideo" controls muted playsinline preload="metadata" poster="../assets/img/asscg/asscg-intervals.png">
             <source src="../assets/video/asscg-demo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -399,5 +399,15 @@
         </div>
       </section>
     </main>
+    <script>
+      window.addEventListener("load", () => {
+        const demoVideo = document.getElementById("demoVideo");
+        if (!demoVideo) return;
+        window.setTimeout(() => {
+          const playPromise = demoVideo.play();
+          if (playPromise) playPromise.catch(() => {});
+        }, 2500);
+      });
+    </script>
   </body>
 </html>
