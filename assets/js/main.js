@@ -228,7 +228,7 @@ const content = {
         date: "2024 - Present",
         title: "University of Science and Technology of China",
         desc:
-          "School of Information Science and Technology, Department of Automation. Average score: 89.3/100, ranking in the top 11%."
+          "School of Information Science and Technology, Department of Automation. Average score: 89.3/100, ranking in the top 11% (18/159)."
       },
       {
         date: "2020 - 2024",
@@ -480,7 +480,7 @@ const content = {
       {
         date: "2024 - 至今",
         title: "中国科学技术大学",
-        desc: "信息学院自动化系，硕士研究生。平均成绩 89.3/100，专业排名前 11%。"
+        desc: "信息学院自动化系，硕士研究生。平均成绩 89.3/100，专业排名前 11%（18/159）。"
       },
       {
         date: "2020 - 2024",
