@@ -121,7 +121,7 @@ const content = {
         links: [{ label: "Project", url: "/asscg/", icon: "external-link" }]
       },
       {
-        title: "Adaptive-WAM",
+        title: "Adaptive-WAM: Quality-Guided Early-Exit Planning from Intermediate Video-Diffusion Features",
         type: "first",
         role: "First author",
         venue: "Under Review",
@@ -387,7 +387,7 @@ const content = {
         links: [{ label: "Project", url: "/asscg/", icon: "external-link" }]
       },
       {
-        title: "Adaptive-WAM",
+        title: "Adaptive-WAM: Quality-Guided Early-Exit Planning from Intermediate Video-Diffusion Features",
         type: "first",
         role: "第一作者",
         venue: "Under Review",
