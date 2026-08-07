@@ -130,7 +130,7 @@ const content = {
         desc:
           "Adaptive-WAM asks how much of a large video diffusion model must actually be executed to make a reliable driving decision. A controlled study shows that planning is largely insensitive to the tested video-noise levels, while strong trajectories can already be decoded from intermediate DiT layers. Built on a Wan2.2-5B backbone, the method attaches trajectory diffusion heads to selected DiT blocks and uses a lightweight quality scorer to stop once the best decoded trajectory satisfies a threshold, otherwise continuing from the cached hidden state to a deeper exit. This removes the iterative classifier-free denoising loop and VAE decoding required for future-video synthesis while dynamically allocating backbone depth. On NAVSIM, the adaptive single-trajectory planner reaches 90.8 PDMS, and a separate 64-proposal fixed-exit variant reaches 92.6 PDMS. Adaptive-WAM further obtains 89.9 EPDMS on NAVSIM v2, the best reported result among the compared front-view video world-model planners, and transfers to nuScenes without target-domain fine-tuning with 0.88m average L2 error and a 0.08% collision rate. On an A100, adaptive routing improves PDMS from 90.62 to 90.79 at 170ms average end-to-end latency, about 10% lower than the 190ms fixed block-15 planner and 47% lower than the 320ms fixed full-depth planner.",
         tags: ["Video world model", "Quality-aware multi-exit", "Dynamic depth routing", "Cross-dataset transfer"],
-        links: []
+        links: [{ label: "Paper", url: "https://arxiv.org/abs/2608.06008", icon: "file-text" }]
       },
       {
         title: "From Representational Complementarity to Dual Systems: Synergizing VLM and Vision-Only Backbones for End-to-End Driving",
@@ -396,7 +396,7 @@ const content = {
         desc:
           "Adaptive-WAM 探索大型视频扩散模型在生成可靠驾驶决策时究竟需要执行多少计算。受控实验表明，在测试范围内，规划性能对视频噪声水平基本不敏感，而中间 DiT 层已经能够解码出高质量轨迹。基于 Wan2.2-5B 主干，方法在选定的 DiT block 上挂载轨迹扩散头，并由轻量级轨迹质量评分器判断当前最优轨迹是否达到阈值；若未达到，则从缓存的隐藏状态继续计算至更深出口。部署时因此无需执行未来视频合成所需的迭代 classifier-free denoising 与 VAE 解码，并可依据轨迹质量动态分配主干深度。在 NAVSIM 上，自适应单轨迹规划器达到 90.8 PDMS，独立的 64 候选固定出口版本达到 92.6 PDMS；在 NAVSIM v2 上取得 89.9 EPDMS，是所比较的前视视频世界模型规划器中已报告的最佳结果。无需目标域微调，模型迁移至 nuScenes 后获得 0.88m 平均 L2 误差和 0.08% 碰撞率。在 A100 上，自适应路由将 PDMS 从 90.62 提升至 90.79，平均端到端规划延迟为 170ms，相比 190ms 的固定 block-15 规划器降低约 10%，相比 320ms 的固定全深度规划器降低约 47%。",
         tags: ["视频世界模型", "质量感知多出口", "动态深度路由", "跨数据集迁移"],
-        links: []
+        links: [{ label: "Paper", url: "https://arxiv.org/abs/2608.06008", icon: "file-text" }]
       },
       {
         title: "From Representational Complementarity to Dual Systems: Synergizing VLM and Vision-Only Backbones for End-to-End Driving",
