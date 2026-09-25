@@ -136,7 +136,7 @@ const content = {
         title: "From Representational Complementarity to Dual Systems: Synergizing VLM and Vision-Only Backbones for End-to-End Driving",
         type: "first",
         role: "First author",
-        venue: "Under Review",
+        venue: "NeurIPS 26",
         summary:
           "Analyzes residual complementarity between VLM and vision-only backbones and builds HybridDriveVLA / DualDriveVLA; HybridDriveVLA reaches SOTA among VLA solutions on NAVSIM while DualDriveVLA improves inference speed.",
         desc:
@@ -402,7 +402,7 @@ const content = {
         title: "From Representational Complementarity to Dual Systems: Synergizing VLM and Vision-Only Backbones for End-to-End Driving",
         type: "first",
         role: "第一作者",
-        venue: "Under Review",
+        venue: "NeurIPS 26",
         summary:
           "分析 VLM 与纯视觉主干的残余互补性并构建 HybridDriveVLA / DualDriveVLA；HybridDriveVLA 获得 NAVSIM 基准上 VLA 方案 SOTA 表现，DualDriveVLA 显著提升平均推理速度。",
         desc:
