@@ -25,7 +25,7 @@ const content = {
       focusLabel: "Focus",
       focus: "Autonomous Driving and Embodied Intelligence",
       highlightsLabel: "Highlights",
-      highlights: "7 papers, 3 patents, 2x National Scholarship",
+      highlights: "8 papers, 3 patents, 2x National Scholarship",
       emailLabel: "Email"
     },
     stats: {
@@ -155,6 +155,20 @@ const content = {
           "DriveFine introduces a masked-diffusion VLA model with flexible decoding and self-correction. It designs a plug-and-play block-level mixture-of-experts structure that injects a refinement expert above the generation expert. By enabling explicit expert selection during inference and blocking gradient transfer during training, the two experts are decoupled while preserving pretrained base capability. A hybrid reinforcement learning strategy encourages effective exploration of the refinement expert while maintaining training stability. Experiments on NAVSIM v1, NAVSIM v2, and NavHard show strong effectiveness and robustness.",
         tags: ["Masked diffusion VLA", "Block-level MoE refinement", "NavHard robustness", "Hybrid RL"],
         links: [{ label: "Paper", url: "https://arxiv.org/abs/2602.14577", icon: "file-text" }]
+      },
+      {
+        title: "World4Scorer: Outcome-Grounded World Modeling for Autonomous Driving",
+        type: "collab",
+        role: "Core author",
+        venue: "Under Review",
+        summary:
+          "World-model trajectory scoring grounded in simulated outcomes and real futures; reports NAVSIM-v2 SOTA and strong closed-loop Bench2Drive performance.",
+        summaryHtml:
+          "World-model trajectory scoring grounded in simulated outcomes and real futures; reports <strong>NAVSIM-v2 SOTA</strong> and strong closed-loop Bench2Drive performance.",
+        desc:
+          "World4Scorer uses a trajectory-conditioned JEPA-style predictor to score candidate plans. Simulator outcomes supervise all candidates, while the executed trajectory's observed future anchors shared representations during training. A scene-matched bank supplies low-scoring examples, and inertial re-ranking improves temporal consistency. The paper reports NAVSIM-v2 SOTA, strong adapted-system results on Bench2Drive, and improved OGBench-Cube manipulation planning with the world model and planning budget fixed.",
+        tags: ["World-model trajectory scoring", "Outcome supervision", "NAVSIM-v2 SOTA", "Temporal consistency"],
+        links: [{ label: "Paper", url: "https://arxiv.org/abs/2609.36438", icon: "file-text" }]
       },
       {
         title: "SAMoE-VLA: A Scene Adaptive Mixture-of-Experts Vision-Language-Action Model for Autonomous Driving",
@@ -291,7 +305,7 @@ const content = {
       focusLabel: "方向",
       focus: "自动驾驶和具身智能",
       highlightsLabel: "亮点",
-      highlights: "7 篇论文，3 项相关专利，2 次国家奖学金",
+      highlights: "8 篇论文，3 项相关专利，2 次国家奖学金",
       emailLabel: "邮箱"
     },
     stats: {
@@ -421,6 +435,20 @@ const content = {
           "DriveFine 是一种结合灵活解码与自校正能力的掩码扩散 VLA 模型。我们设计了即插即用的块级专家混合（block-MoE）结构，在生成专家之上注入精炼专家。通过推理过程中启用显式专家选择并阻断训练过程中的梯度传递，两个专家被解耦，从而保留预训练权重的基础能力与通用模式。此外，方法设计了混合强化学习策略，在维持训练稳定性的同时促进对精炼专家的有效探索。在 NAVSIM v1、NAVSIM v2 和 NavHard 基准测试上的大量实验表明，DriveFine 具有强有效性与鲁棒性。",
         tags: ["掩码扩散 VLA", "块级 MoE 精炼", "NavHard 鲁棒性", "混合强化学习"],
         links: [{ label: "Paper", url: "https://arxiv.org/abs/2602.14577", icon: "file-text" }]
+      },
+      {
+        title: "World4Scorer: Outcome-Grounded World Modeling for Autonomous Driving",
+        type: "collab",
+        role: "核心作者",
+        venue: "Under Review",
+        summary:
+          "结合模拟结果与真实未来监督的世界模型轨迹评分方法；取得 NAVSIM-v2 SOTA，并在闭环 Bench2Drive 上表现出色。",
+        summaryHtml:
+          "结合模拟结果与真实未来监督的世界模型轨迹评分方法；取得 <strong>NAVSIM-v2 SOTA</strong>，并在闭环 Bench2Drive 上表现出色。",
+        desc:
+          "World4Scorer 使用轨迹条件化的 JEPA 风格预测器为候选规划评分。模拟器结果监督所有候选，已执行轨迹的真实未来则在训练中约束共享表征。场景匹配样本库补充低分轨迹，惯性重排序改善时序一致性。论文报告了 NAVSIM-v2 SOTA、适配系统在 Bench2Drive 上的出色表现，以及在固定世界模型与规划预算下对 OGBench-Cube 操作规划的提升。",
+        tags: ["世界模型轨迹评分", "结果监督", "NAVSIM-v2 SOTA", "时序一致性"],
+        links: [{ label: "Paper", url: "https://arxiv.org/abs/2609.36438", icon: "file-text" }]
       },
       {
         title: "SAMoE-VLA: A Scene Adaptive Mixture-of-Experts Vision-Language-Action Model for Autonomous Driving",
