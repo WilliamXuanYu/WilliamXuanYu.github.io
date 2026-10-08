@@ -17,7 +17,7 @@ const content = {
       subtitle: "M.S. student in Automation at the University of Science and Technology of China.",
       intro:
         "I work on reliable autonomous driving planners, closed-loop evaluation, vision-language-action systems, and efficient deployment for real-world driving stacks.",
-      featuredPaper: "Featured Paper"
+      googleScholar: "Google Scholar"
     },
     facts: {
       affiliationLabel: "Affiliation",
@@ -254,7 +254,7 @@ const content = {
         date: "2024 - Present",
         title: "University of Science and Technology of China",
         desc:
-          "School of Information Science and Technology, Department of Automation. Average score: 89.3/100, ranking in the top 11% (18/159)."
+          "School of Information Science and Technology, Department of Automation. Official GPA: 3.84/4.30. Average score: 89.3/100, ranking in the top 11% (18/159)."
       },
       {
         date: "2020 - 2024",
@@ -297,7 +297,7 @@ const content = {
       subtitle: "中国科学技术大学自动化系硕士研究生。",
       intro:
         "我关注可靠的自动驾驶规划、闭环评估、视觉-语言-动作系统，以及面向真实自动驾驶技术栈的高效部署。",
-      featuredPaper: "代表论文"
+      googleScholar: "谷歌学术"
     },
     facts: {
       affiliationLabel: "单位",
@@ -532,7 +532,7 @@ const content = {
       {
         date: "2024 - 至今",
         title: "中国科学技术大学",
-        desc: "信息学院自动化系，硕士研究生。平均成绩 89.3/100，专业排名前 11%（18/159）。"
+        desc: "信息学院自动化系，硕士研究生。官方 GPA：3.84/4.30，平均成绩 89.3/100，专业排名前 11%（18/159）。"
       },
       {
         date: "2020 - 2024",
