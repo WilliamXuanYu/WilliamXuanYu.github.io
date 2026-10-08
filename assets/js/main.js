@@ -253,14 +253,20 @@ const content = {
       {
         date: "2024 - Present",
         title: "University of Science and Technology of China",
-        desc:
-          "School of Information Science and Technology, Department of Automation. Official GPA: 3.84/4.30. Average score: 89.3/100, ranking in the top 11% (18/159)."
+        descLines: [
+          "School of Information Science and Technology, Department of Automation.",
+          "Official GPA: 3.84/4.30. Average score: 89.3/100.",
+          "Ranking in the top 11% (18/159)."
+        ]
       },
       {
         date: "2020 - 2024",
         title: "Jinan University",
-        desc:
-          "College of Artificial Intelligence. GPA: 4.31/5.0, 93.1/100. Ranked 1st out of 128 students in the major."
+        descLines: [
+          "College of Artificial Intelligence.",
+          "GPA: 4.31/5.0. Average score: 93.1/100.",
+          "Ranked 1st out of 128 students in the major."
+        ]
       }
     ],
     honorItems: [
@@ -532,12 +538,20 @@ const content = {
       {
         date: "2024 - 至今",
         title: "中国科学技术大学",
-        desc: "信息学院自动化系，硕士研究生。官方 GPA：3.84/4.30，平均成绩 89.3/100，专业排名前 11%（18/159）。"
+        descLines: [
+          "信息学院自动化系，硕士研究生。",
+          "官方 GPA：3.84/4.30，平均成绩 89.3/100。",
+          "专业排名前 11%（18/159）。"
+        ]
       },
       {
         date: "2020 - 2024",
         title: "暨南大学",
-        desc: "人工智能学院。绩点 4.31/5.0，93.1/100，专业排名 1/128。"
+        descLines: [
+          "人工智能学院。",
+          "GPA：4.31/5.0，平均成绩 93.1/100。",
+          "专业排名 1/128。"
+        ]
       }
     ],
     honorItems: [
@@ -835,7 +849,7 @@ function renderEducation() {
               <article class="timeline-item">
                 <time>${item.date}</time>
                 <h3>${item.title}</h3>
-                <p>${item.desc}</p>
+                <p>${item.descLines.join("<br>")}</p>
               </article>
             `
           )
