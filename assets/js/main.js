@@ -25,7 +25,7 @@ const content = {
       focusLabel: "Focus",
       focus: "Autonomous Driving and Embodied Intelligence",
       highlightsLabel: "Highlights",
-      highlights: "8 papers, 3 patents, 2x National Scholarship",
+      highlights: "9 papers, 3 patents, 2x National Scholarship",
       emailLabel: "Email"
     },
     stats: {
@@ -171,6 +171,18 @@ const content = {
         links: [{ label: "Paper", url: "https://arxiv.org/abs/2609.36438", icon: "file-text" }]
       },
       {
+        title: "Language2Drive: Do Vision-Language-Action Models Really Follow the Instructions in Autonomous Driving?",
+        type: "collab",
+        role: "Co-author",
+        venue: "Under Review",
+        summary:
+          "Counterfactual evaluation of driving VLA instruction following; 93.2% of successful rollouts lack a successful counterpart under an alternative feasible instruction.",
+        desc:
+          "Language2Drive tests language control through paired counterfactual units that keep the driving scene fixed and vary only the instruction. Evaluation spans four instruction-following scopes across closed-loop CARLA, reconstructed real-world scenes, and open-loop benchmarks. Despite strong driving performance, 93.2% of successful rollouts lack success under the alternative feasible instruction, often reflecting a preference for one behavior. Conventional driving scores and isolated successes can therefore overstate instruction-following capability.",
+        tags: ["VLA instruction following", "Counterfactual evaluation", "Closed-loop benchmarking", "Language-conditioned driving"],
+        links: [{ label: "Paper", url: "https://arxiv.org/abs/2610.16634", icon: "file-text" }]
+      },
+      {
         title: "SAMoE-VLA: A Scene Adaptive Mixture-of-Experts Vision-Language-Action Model for Autonomous Driving",
         type: "collab",
         role: "Core author",
@@ -311,7 +323,7 @@ const content = {
       focusLabel: "方向",
       focus: "自动驾驶和具身智能",
       highlightsLabel: "亮点",
-      highlights: "8 篇论文，3 项相关专利，2 次国家奖学金",
+      highlights: "9 篇论文，3 项相关专利，2 次国家奖学金",
       emailLabel: "邮箱"
     },
     stats: {
@@ -455,6 +467,18 @@ const content = {
           "World4Scorer 使用轨迹条件化的 JEPA 风格预测器为候选规划评分。模拟器结果监督所有候选，已执行轨迹的真实未来则在训练中约束共享表征。场景匹配样本库补充低分轨迹，惯性重排序改善时序一致性。论文报告了 NAVSIM-v2 SOTA、适配系统在 Bench2Drive 上的出色表现，以及在固定世界模型与规划预算下对 OGBench-Cube 操作规划的提升。",
         tags: ["世界模型轨迹评分", "结果监督", "NAVSIM-v2 SOTA", "时序一致性"],
         links: [{ label: "Paper", url: "https://arxiv.org/abs/2609.36438", icon: "file-text" }]
+      },
+      {
+        title: "Language2Drive: Do Vision-Language-Action Models Really Follow the Instructions in Autonomous Driving?",
+        type: "collab",
+        role: "合作作者",
+        venue: "Under Review",
+        summary:
+          "面向驾驶 VLA 指令遵循能力的反事实评估；93.2% 的成功行驶在另一条可行指令下没有对应的成功结果。",
+        desc:
+          "Language2Drive 通过配对反事实单元检验语言控制能力：固定驾驶场景，仅改变指令。评估覆盖四类指令遵循范围，结合闭环 CARLA、重建真实场景及开环基准。尽管模型驾驶表现较强，93.2% 的成功行驶在另一条可行指令下未能对应成功，常表现为偏好单一行为。因此，传统驾驶评分和孤立成功案例可能高估模型的指令遵循能力。",
+        tags: ["VLA 指令遵循", "反事实评估", "闭环基准测试", "语言条件驾驶"],
+        links: [{ label: "Paper", url: "https://arxiv.org/abs/2610.16634", icon: "file-text" }]
       },
       {
         title: "SAMoE-VLA: A Scene Adaptive Mixture-of-Experts Vision-Language-Action Model for Autonomous Driving",
